@@ -1,0 +1,58 @@
+@use "../variables" as vars;
+
+
+// SIDEBAR
+$sidebar-padding: 0;
+//WIDGETS
+$widgets-bg-color: #fff;
+$widgets-color: vars.$base-color;
+
+
+
+
+.has-sidebar {
+  margin-top: 2rem;
+  @media (min-width: vars.$xl) {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 1rem;
+
+  }
+}
+
+.sidebar {
+  background-color: $widgets-bg-color;
+  color: $widgets-color;
+  padding: $sidebar-padding;
+  margin-bottom: 2rem;
+
+}
+
+
+.widget {
+  color: $widgets-color;
+
+  h2 {
+    @media (min-width: vars.$breakpoint-nav) {
+      margin-top: 0;
+    }
+  }
+}
+
+.wp-block-categories {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  li {
+    display: inline-block;
+    padding: .5rem;
+    margin: .35rem;
+    border: 1px solid rgba(0, 0, 0, .2);
+    font-size: .85rem;
+  }
+
+  a {
+    color: $widgets-color;
+  }
+}

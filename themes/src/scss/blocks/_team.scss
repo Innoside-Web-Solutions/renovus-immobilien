@@ -1,0 +1,96 @@
+@use "../variables" as vars;
+
+.team {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1em;
+  .team-member {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    transition: all 0.5s ease-in-out;
+    margin-bottom: 2em;
+
+
+    .contact-icons{
+      position: absolute;
+      top: 20px;
+      left: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+
+    .member-icon {
+      color: #fff;
+      font-size: 20px;
+      background-color: vars.$primary;
+      border-radius: 100%;
+      padding: .75em;
+      z-index: 1;
+
+      &:hover {
+        background-color: vars.$secondary;
+        transition: 0.3s all ease-in-out;
+      }
+
+      @media screen and (min-width: vars.$sm) {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s ease-in-out;
+
+      }
+
+
+
+    }
+
+
+
+    &:hover .member-icon {
+      visibility: visible;
+      opacity: 1;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .team-member-image{
+      overflow: hidden;
+      img {
+        transition: all 0.5s ease-in-out;
+        transform: scale(1);
+      }
+    }
+
+    &:hover .team-member-image{
+      transition: all 0.5s ease-in-out;
+
+      &:hover img {
+        transform: scale(1.025);
+        transition: all 0.5s ease-in-out;
+      }
+    }
+
+
+    .member-description {
+      .member-name {
+        margin: 1rem 0 0!important;
+
+      }
+
+      p {
+        margin: 1rem 0;
+      }
+      a{
+        display: block;
+      }
+
+    }
+
+  }
+
+}

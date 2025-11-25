@@ -1,0 +1,113 @@
+@use "../variables" as vars;
+@use "../typography/flaticon" as flaticon;
+
+// LISTS
+$list-marker-color: vars.$primary;
+
+
+ul {
+  li::marker {
+    color: $list-marker-color;
+  }
+}
+
+ul.is-style-highlights {
+  list-style-type: none;
+  padding: 0;
+  padding-top: 1em;
+
+
+  li {
+    position: relative;
+    padding-left: 1.1em;
+    margin-bottom: .4em;
+
+    &:before {
+      @include flaticon.flaticon();
+      content: "\f107";
+      color: $list-marker-color;
+      position: absolute;
+      font-size: .5em;
+      top: .95em;
+      left: 0;
+    }
+  }
+}
+
+ul.is-style-check {
+  list-style-type: none;
+  padding: 0;
+  padding-top: 1em;
+
+
+  li {
+    position: relative;
+    padding-left: 1.4em;
+    margin-bottom: .4em;
+
+    &:before {
+      @include flaticon.flaticon;
+      content: "\f106";
+      color: $list-marker-color;
+      position: absolute;
+      font-size: 1.1em;
+      top: .2em;
+      left: 0;
+    }
+  }
+}
+
+
+#page-footer ul.is-style-highlights li:before,
+#page-footer ul.is-style-check li:before {
+  color: #fff;
+}
+
+/***
+* AUTO COLOR LISTS
+*/
+
+ul.has-lighted-color,
+.has-lighted-color ul {
+  li::marker {
+    color: vars.$lighted !important;
+  }
+
+  li:before {
+    color: vars.$lighted !important;
+  }
+}
+
+ul.has-base-bg-color,
+.has-base-bg-color ul {
+  li::marker {
+    color: vars.$base-bg-color !important;
+  }
+
+  li:before {
+    color: vars.$base-bg-color !important;
+  }
+}
+
+ul.has-secondary-background-color,
+.has-secondary-background-color ul {
+  li::marker {
+    color: vars.$primary !important;
+  }
+
+  li:before {
+    color: vars.$primary !important;
+  }
+}
+
+ul.has-primary-background-color,
+.has-primary-background-color ul {
+  li::marker {
+    color: vars.$secondary !important;
+  }
+
+  li:before {
+    color: vars.$secondary !important;
+  }
+}
+

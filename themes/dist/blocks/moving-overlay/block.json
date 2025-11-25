@@ -1,0 +1,32 @@
+{
+  "name": "acf/overlay",
+  "title": "Moving Overlay",
+  "description": "A custom block for overlay animation",
+  "style": [
+  ],
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": [
+    "overlay"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "moving-overlay.php"
+  },
+  "supports": {
+    "anchor": true,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "ariaLabel": true
+  },
+  "allowedBlocks": [
+    "core/paragraph",
+    "core/heading"
+  ]
+}

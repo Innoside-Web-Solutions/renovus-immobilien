@@ -1,0 +1,44 @@
+{
+  "name": "acf/tsc-video-header",
+  "title": "Video Header",
+  "description": "Bitte zunächst Video hochladen, dann Gutenberg-Blöcke nach Belieben hinzufügen. Hierzu einfach in die Vorschau klicken und Enter drücken",
+  "style": [
+  ],
+  "category": "formatting",
+  "icon": "format-video",
+  "keywords": [
+    "video",
+    "vids",
+    "youtube",
+    "vimeo",
+    "header",
+    "pageheader"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "video-header.php"
+  },
+  "supports": {
+    "anchor": true,
+    "spacing": {
+      "padding": true,
+      "margin": false
+    },
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "ariaLabel": true,
+    "align": false
+
+  },
+  "allowedBlocks": [
+    "core/paragraph",
+    "core/heading",
+    "core/buttons",
+    "core/spacer",
+    "core/list",
+    "core/group",
+    "core/columns"
+  ]
+}

@@ -1,0 +1,54 @@
+dir:
+- themes
+- npm install
+- npm install fslightbox
+npm run watch für theme-styles und js
+
+- themes/src/blocks
+1. npm install npx
+2. npx @wordpress/create-block %slug%
+3. welchse in den block-slug ordner
+3. npm i -D npm-run-all cpx rimraf
+4. PFADE ANPASSEN  in der package json
+4. themes/dist/block -> block-verzeichnis anlegen!
+npm run build bzw. npm run start im blocks ordner
+
+5. entfernen der styles (style.css/editor.css) in der index.js und der edit.js
+
+
+
+package.json für jeden Block anpassen, aber NUR SCRIPTS!!!!!!! + Pfade anpassen
+{
+	"name": "inno-header",
+	"version": "0.1.0",
+	"main": "build/index.js",
+	"scripts": {
+		"start": "run-p watch:build watch:copy",
+		"watch:build": "wp-scripts start",
+		"watch:copy": "cpx \"build/**/*\" ../../../dist/blocks/inno-header --watch --clean --verbose",
+
+		"build": "wp-scripts build && npm run export",
+		"export": "cpx \"build/**/*\" ../../../dist/blocks/inno-header --clean",
+
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^30.25.0",
+		"cpx": "^1.5.0",
+		"npm-run-all": "^4.1.5",
+		"rimraf": "^6.0.1"
+	}
+}
+
+
+
+Für neue Initiierung des block builds
+
+im jeweiligen block Ordner:
+rm -rf node_modules
+rm package-lock.json
+npm install

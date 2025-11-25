@@ -1,0 +1,84 @@
+:root {
+
+
+
+
+
+  @media (max-width: 1599px) {
+    --wp--preset--spacing--10: calc(1rem / 1.25);
+    --wp--preset--spacing--20: calc(2rem / 1.25);
+    --wp--preset--spacing--30: calc(3rem / 1.25);
+    --wp--preset--spacing--40: calc(4rem / 1.25);
+    --wp--preset--spacing--50: calc(5rem / 1.25);
+    --wp--preset--spacing--60: calc(6rem / 1.25);
+    --wp--preset--spacing--70: calc(7rem / 1.25);
+    --wp--preset--spacing--80: calc(8rem / 1.25);
+    --wp--preset--spacing--90: calc(9rem / 1.25);
+    --wp--preset--spacing--100: calc(10rem / 1.25);
+  }
+  @media (max-width: 1399px) {
+    --wp--preset--spacing--10: calc(1rem / 1.5);
+    --wp--preset--spacing--20: calc(2rem / 1.5);
+    --wp--preset--spacing--30: calc(3rem / 1.5);
+    --wp--preset--spacing--40: calc(4rem / 1.5);
+    --wp--preset--spacing--50: calc(5rem / 1.5);
+    --wp--preset--spacing--60: calc(6rem / 1.5);
+    --wp--preset--spacing--70: calc(7rem / 1.5);
+    --wp--preset--spacing--80: calc(8rem / 1.5);
+    --wp--preset--spacing--90: calc(9rem / 1.5);
+    --wp--preset--spacing--100: calc(10rem / 1.5);
+  }
+  @media (max-width: 1199px) {
+    --wp--preset--spacing--10: calc(1rem / 2);
+    --wp--preset--spacing--20: calc(2rem / 2);
+    --wp--preset--spacing--30: calc(3rem / 2);
+    --wp--preset--spacing--40: calc(4rem / 2);
+    --wp--preset--spacing--50: calc(5rem / 2);
+    --wp--preset--spacing--60: calc(6rem / 2);
+    --wp--preset--spacing--70: calc(7rem / 2);
+    --wp--preset--spacing--80: calc(8rem / 2);
+    --wp--preset--spacing--90: calc(9rem / 2);
+    --wp--preset--spacing--100: calc(10rem / 2);
+  }
+  @media (max-width: 992px) {
+    --wp--preset--spacing--10: 25px;
+    --wp--preset--spacing--20:  25px;
+    --wp--preset--spacing--30: 30px;
+    --wp--preset--spacing--40:  20px;
+    --wp--preset--spacing--50:  30px;
+    --wp--preset--spacing--60:  30px;
+    --wp--preset--spacing--70:  35px;
+    --wp--preset--spacing--80:  35px;
+    --wp--preset--spacing--90:  40px;
+    --wp--preset--spacing--100: 40px;
+  }
+
+  @media (max-width: 781px) {
+    --wp--preset--spacing--10: calc(50px / 2);
+    --wp--preset--spacing--20: calc(50px / 2);
+    --wp--preset--spacing--30: calc(50px / 2);
+    --wp--preset--spacing--40: calc(50px / 2);
+    --wp--preset--spacing--50: calc(50px / 2);
+    --wp--preset--spacing--60: calc(50px / 1.5);
+    --wp--preset--spacing--70: calc(50px / 1.5);
+    --wp--preset--spacing--80: calc(50px / 1.5);
+    --wp--preset--spacing--90: calc(50px/ 1.5);
+    --wp--preset--spacing--100: 50px;
+  }
+
+
+  @media (max-width: 400px) {
+    --wp--preset--spacing--10: 2px;
+    --wp--preset--spacing--20: 4px;
+    --wp--preset--spacing--30: 6px;
+    --wp--preset--spacing--40: 8px;;
+    --wp--preset--spacing--50: 10px;;
+    --wp--preset--spacing--60: 12px;;
+    --wp--preset--spacing--70: 14px;;
+    --wp--preset--spacing--80: 16px;;
+    --wp--preset--spacing--90: 18px;;
+    --wp--preset--spacing--100: 20px;;
+  }
+
+
+}

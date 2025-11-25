@@ -1,0 +1,18 @@
+.icon-teaser-item {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+
+  .tsc-teaser-icon-wrapper {
+
+    img {
+      width: 32px;
+      overflow: hidden;
+    }
+
+  }
+
+  .acf-innerblocks-container > *:first-child {
+    margin-top: 0;
+  }
+
+}

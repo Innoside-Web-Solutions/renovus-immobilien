@@ -1,0 +1,65 @@
+@use "../variables" as vars;
+
+$icon-size: 2.5rem;
+$max-width: 800px;
+
+
+.wp-block-tsc-inno-akkordeon {
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 0;
+  max-width: $max-width;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .inno-accordion-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+
+    .inno-accordion-button {
+      all: unset;
+      cursor: pointer;
+      flex: 1;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-align: left;
+
+      display: flex;
+      align-items: center;
+      padding-right: calc($icon-size + 1rem);
+      &::after {
+        font-weight: 400 !important;
+        position: absolute;
+        right: 0;
+        content: '+';
+        width: $icon-size;
+        height: $icon-size;
+        min-width: $icon-size; // verhindert Schrumpfen auf mobilen Geräten
+        border-radius: 50%;
+        background-color: #005f7f;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        transition: transform 0.3s ease;
+        flex-shrink: 0; // verhindert Zusammenrücken
+      }
+    }
+  }
+
+  &.is-open button.inno-accordion-button::after {
+    content: '−';
+  }
+
+  .inno-accordion-content {
+    padding-left: 1rem;
+    display: block;
+
+    &[hidden] {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@use "../variables" as vars;
+
+.tsc-moving-overlay{
+  position: relative;
+  .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    background-color: #fff;
+    opacity: .95;
+  }
+}

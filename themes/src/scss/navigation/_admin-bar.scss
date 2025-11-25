@@ -1,0 +1,22 @@
+@use "../variables" as vars;
+
+.admin-bar,
+.admin-bar {
+  #navbar {
+    @media (min-width: 783px) {
+      top: 32px;
+    }
+
+    /*   @media (min-width: vars.$breakpoint-nav) {
+         .sub-menu {
+           top: 112px !important;
+         }
+       }*/
+
+
+  }
+
+
+}
+
+// Admin bar sidebar - s. side-nav.scss

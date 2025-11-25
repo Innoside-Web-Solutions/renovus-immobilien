@@ -1,0 +1,35 @@
+{
+  "name": "acf/tsc-overlay-video",
+  "title": "Overlay Video",
+  "description": "Video mit Overlay Mask",
+  "style": [
+  ],
+  "category": "formatting",
+  "icon": "format-video",
+  "keywords": [
+    "video",
+    "vids",
+    "youtube"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "overlay-video.php"
+  },
+  "supports": {
+    "anchor": true,
+    "spacing": {
+      "padding": true,
+      "margin": false
+    },
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "ariaLabel": true,
+    "align": false
+
+  },
+  "allowedBlocks": [
+
+  ]
+}

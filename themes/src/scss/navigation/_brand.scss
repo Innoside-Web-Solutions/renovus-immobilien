@@ -1,0 +1,89 @@
+@use "../variables" as vars;
+
+
+.brand,
+.brand-lighted,
+.brand-mobile {
+
+  @media (min-width: vars.$breakpoint-nav) {
+    position: absolute;
+    top: 0;
+    z-index: 999999999999;
+  }
+
+
+  a {
+
+    display: block;
+    @media (min-width: vars.$breakpoint-nav) {
+      padding-top: 5px;
+    }
+
+    img,
+    svg {
+      width: auto;
+      height: vars.$nav-height-mobile - 10px;
+      @media (min-width: vars.$breakpoint-nav) {
+        height: vars.$nav-height-desktop - 10px !important;
+      }
+    }
+
+  }
+
+}
+
+#navbar {
+
+  // ===== M o b i l e ====
+  .brand,
+  .brand-lighted {
+    display: none;
+  }
+
+  @media (min-width: vars.$sm) {
+    .brand-mobile {
+      display: none;
+    }
+  }
+
+
+  @media (min-width: vars.$sm) {
+
+
+    // ===== Desktop incl. colored navbar ====
+    // ein
+    .brand {
+      display: block;
+    }
+
+    // aus
+    .brand-mobile {
+      display: none;
+    }
+
+    .brand-lighted {
+      display: none;
+    }
+
+
+    &.full-size-pageheader-menu.lighted {
+      .brand-mobile {
+        display: none;
+      }
+
+      .brand {
+        display: none;
+      }
+
+      .brand-lighted {
+        display: block;
+      }
+    }
+
+
+  }
+}
+
+
+
+

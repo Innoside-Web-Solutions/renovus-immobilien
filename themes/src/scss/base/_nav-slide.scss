@@ -1,0 +1,104 @@
+@use "../variables" as vars;
+
+
+
+#slide-login,
+#slide-inquiry {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 950;
+    width: 90vw;
+    max-width: 600px;
+    background-color: vars.$primary;
+    color: vars.$base-bg-color;
+    padding: 1rem;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(100%);
+    overflow-y: auto;
+    @media (min-width: vars.$xs) {
+        padding: 2rem;
+    }
+
+    .close{
+        display: inline-block;
+        float: right;
+        cursor: pointer;
+        svg{
+            fill: vars.$base-bg-color;
+        }
+        &:hover{
+            svg{
+                fill: vars.$base-color;
+            }
+        }
+    }
+
+    .title {
+        display: block;
+        margin-bottom: 0;
+        @media (min-width: vars.$sm) {
+            margin-top: 3em;
+        }
+    }
+
+    .form-wrapper {
+        padding-bottom: 2em;
+    }
+
+    .form-info {
+        margin: 2em 0 0;
+        font-size: .9em;
+        span {
+            display: block;
+        }
+    }
+
+    a:not(.btn):not(.btn-primary):not(.btn-secondary) {
+        color: vars.$base-border-color;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+    input[type="submit"]{
+        @include button(vars.$primary, #ffffff, #ebebeb);
+    }
+
+    .gform_wrapper.gravity-theme .ginput_container_address span{
+        flex: 0 0 100%;
+    }
+
+}
+
+.js {
+    #slide-login,
+    #slide-inquiry {
+        transition: transform 250ms ease-in-out, visibility 300ms;
+    }
+}
+
+#trigger-login {
+    display: none;
+    &:checked ~ #slide-login {
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateX(0);
+    }
+}
+
+#trigger-inquiry {
+    display: none;
+    &:checked ~ #slide-inquiry {
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateX(0);
+    }
+}
+
+#form-login p {
+    position: relative;
+}

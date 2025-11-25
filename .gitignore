@@ -1,0 +1,5 @@
+data
+**/node_modules/
+
+# Project exclude paths
+/themes/dist/assets/gsap-public/src/SplitText.js

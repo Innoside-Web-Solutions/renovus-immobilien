@@ -1,0 +1,1 @@
+<h2 class="no-posts"><?php _e('No Posts found', 'tsc'); ?></h2>

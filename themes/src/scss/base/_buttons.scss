@@ -1,0 +1,54 @@
+@use "../variables" as vars;
+@use "../mixins" as mixins;
+
+// =====================================================
+// ✅ Universelles Button-Mixin
+// -----------------------------------------------------
+// Nutze für konsistente Buttons überall im Projekt.
+// Optionaler Border-Parameter zur besseren Kontrolle.
+// =====================================================
+
+@mixin button($bg, $color, $border: transparent) {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  padding: 1em 1.5em;
+  margin: 1em 0 1.1em;
+  line-height: 1;
+  border-radius: vars.$button-radius;
+  border: 1px solid $border;
+  background: $bg;
+  color: $color;
+  font-family: vars.$primary-font-family;
+  font-weight: vars.$base-font-weight;
+  box-shadow: none;
+  transition: opacity 0.3s linear, transform 0.2s ease;
+
+  &:hover,
+  &:active {
+    opacity: 0.8;
+    transform: translateY(-1px);
+  }
+}
+
+// =====================================================
+// ✅ Button Variants
+// -----------------------------------------------------
+// Einheitliche Klassennamen für WP & Custom Buttons.
+// =====================================================
+
+.btn,
+.ff-btn,
+input[type="submit"],
+.wp-block-button .wp-block-button__link,
+.is-style-btn-primary .wp-block-button__link,
+.btn-primary {
+  @include button(vars.$primary, #fff, vars.$primary);
+}
+
+.btn-secondary,
+.is-style-btn-secondary .wp-block-button__link {
+  @include button(vars.$secondary, #fff, vars.$secondary);
+}

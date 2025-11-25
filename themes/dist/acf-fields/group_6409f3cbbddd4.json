@@ -1,0 +1,556 @@
+{
+    "key": "group_6409f3cbbddd4",
+    "title": "Datenschutz",
+    "fields": [
+        {
+            "key": "field_640a3f513ddbd",
+            "label": "Datenschutz",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_640a3f633ddbe",
+            "label": "",
+            "name": "privacy",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_640a3fc70f7c6",
+                    "label": "Text Kontaktformular anzeigen",
+                    "name": "showContactForm_policy",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "allow_in_bindings": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1
+                },
+                {
+                    "key": "field_640a40394614f",
+                    "label": "Text Kontaktformular",
+                    "name": "contactForm_policy",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_640a3fc70f7c6",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Wenn Sie per Formular auf der Website oder per E-Mail Kontakt mit uns aufnehmen, werden Ihre angegebenen Daten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen sechs Monate bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.",
+                    "maxlength": "",
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_640a450a006aa",
+                    "label": "Text Analysezwecke anzeigen",
+                    "name": "showAnalysisPurposes_policy",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "allow_in_bindings": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1
+                },
+                {
+                    "key": "field_640a45598f3ab",
+                    "label": "Text Analysezwecke",
+                    "name": "analysisPurposes_policy",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_640a450a006aa",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Daten werden zu Analysezwecken erhoben und verwendet. Diese Datenverarbeitung erfolgt nicht personenbezogen (siehe hierzu nachstehend Informationen zu Cookies).",
+                    "maxlength": "",
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_640a500573307",
+                    "label": "Text Registrierung anzeigen",
+                    "name": "showRegistry_policy",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "allow_in_bindings": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1
+                },
+                {
+                    "key": "field_640a50809d348",
+                    "label": "Text Registrierung",
+                    "name": "registry_policy",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_640a500573307",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Bei einer Registrierung wird die E-Mail-Adresse des Nutzers sowie ein Passwort gespeichert. Sofern in der Folge ein Kauf erfolgt, wird die E-Mail-Adresse mit den beim Kaufvorgang ermittelten Daten verknüpft. Die von Ihnen bereit gestellten Daten sind zur Einrichtung des Nutzeraccounts erforderlich. Die Datenverarbeitung erfolgt für die Dauer des Bestehens des Nutzeraccounts. Bei Löschung des Nutzeraccounts erfolgt eine Löschung der E-Mail-Adresse und des Passworts sowie der Verknüpfung zu Daten des Kaufvorganges.",
+                    "maxlength": "",
+                    "allow_in_bindings": 1,
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_640a582dc06f4",
+                    "label": "Text IT-Sicherheit anzeigen",
+                    "name": "showItSecurity_policy",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "allow_in_bindings": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1
+                },
+                {
+                    "key": "field_640a593bfea3c",
+                    "label": "Text IT-Sicherheit",
+                    "name": "itSecurity_policy",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_640a582dc06f4",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Beim Besuch dieser Website werden darüber hinaus Logfiles gespeichert, welche die IP-Adresse und sonstige Daten zum Zugriff auf die Website enthalten (z. B. Datum, Uhrzeit, User Agent, Referer). Die Datenverarbeitung erfolgt befristet (maximal 30 Tage) und nur zur Absicherung vor DDOS Attacken oder sonstigen Eingriffen in die Funktionalität der Website sowie der allenfalls dahinterliegenden Datenbanksysteme.",
+                    "maxlength": "",
+                    "allow_in_bindings": 1,
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_640a582cc06f3",
+                    "label": "Text Cookies anzeigen",
+                    "name": "showCookies_policy",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "allow_in_bindings": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1
+                },
+                {
+                    "key": "field_640a596b371c8",
+                    "label": "Text Cookies",
+                    "name": "cookies_policy",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_640a582cc06f3",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Diese Website verwendet so genannte Cookies. Dabei handelt es sich um kleine Textdateien, die mit Hilfe des Browsers auf Ihrem Endgerät abgelegt werden. Sie richten keinen Schaden an.\u2028Auf dieser Seite werden sogenannte Session Cookies verwendet. Diese werden beim Aufruf der Website generiert und automatisch wieder gelöscht. Sie dienen der Wiedererkennung, wenn Sie innerhalb kurzer Zeit dieselbe Website erneut aufrufen, um bereits getätigte Voreinstellungen erneut zu berücksichtigen. Es werden dabei keinerlei personenbezogene Daten gespeichert oder verarbeitet.\r\nCookies haben den Zweck, das Website-Angebot nutzerfreundlich zu gestalten. Einige Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese löschen. Sie ermöglichen es sohin dem Websitebetreiber, Ihren Browser beim nächsten Besuch wiederzuerkennen. Wenn Sie dies nicht wünschen, so können Sie Ihren Browser so einrichten, dass er Sie über das Setzen von Cookies informiert und Sie dies nur im Einzelfall erlauben. Bei der Deaktivierung von Cookies kann die Funktionalität der Website jedoch eingeschränkt sein.",
+                    "maxlength": "",
+                    "allow_in_bindings": 1,
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_640a582cc06f2",
+                    "label": "Text Google Analytics anzeigen",
+                    "name": "showGoogleanalytics_policy",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "allow_in_bindings": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1
+                },
+                {
+                    "key": "field_640a59b92e432",
+                    "label": "Text Google Analytics",
+                    "name": "googleAnalytics_policy",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_640a582cc06f2",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Diese Website nutzt Funktionen des Webanalysedienstes Google Analytics. Anbieter ist Google Inc., 1600 Amphitheatre Parkway Mountain View, CA 94043, USA. Wir nutzen die Funktion „Aktivierung der IP-Anonymisierung“ auf dieser Website. Dadurch wird Ihre IP-Adresse von Google innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum vor der Verarbeitung\/Speicherung gekürzt. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen, um die Kampagnenleistung von Onlinewerbung für Analyse- und Optimierungszwecke zu messen.\r\nZu den verarbeiteten Daten zählen insbesondere Online-Kennzeichnungen (einschließlich Cookie-Kennungen), Internet-Protokoll-Adressen, Gerätekennungen, Standortdaten, vom Kunden vergebene Kennzeichnungen sowie Nutzerdaten (insbesondere Zeitpunkt und Dauer des Zugriffs, Auswahl bestimmter Angebote, etc.). Mehr Informationen zum Umgang mit Nutzerdaten bei Google Analytics finden Sie in der Datenschutzerklärung von Google, abrufbar unter <a href href=\"https:\/\/policies.google.com\/privacy?hl=de\">https:\/\/policies.google.com\/privacy?hl=de<\/a>.\r\nSie können die Erfassung der durch das Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem Sie das unter dem folgenden Link verfügbare Browser-Plugin herunterladen und installieren: <a href=\"https:\/\/tools.google.com\/dlpage\/gaoptout?hl=de\">https:\/\/tools.google.com\/dlpage\/gaoptout?hl=de<\/a>\r\nEine Anleitung, wie Sie ebenfalls das Speichern von Daten durch Google verhindern können, finden Sie unter folgendem Link: <a href=\"https:\/\/developers.google.com\/analytics\/devguides\/collection\/gajs\/?hl=de&mono_donottrack=false#disable\">https:\/\/developers.google.com\/analytics\/devguides\/collection\/gajs\/?hl=de&mono_donottrack=false#disable<\/a>\r\nDie Beziehung zum Webanalyseanbieter basiert beim Einsatz von Google Analytics auf einer Auftragsdatenverarbeitung. Die Übermittlung von Daten an den Auftragsverarbeiter basiert auf einem Angemessenheitsbeschluss der Europäischen Kommission (Selbstzertifizierung Privacy Shield). Die Daten werden regelmäßig (derzeit alle 26 Monate) gelöscht.",
+                    "maxlength": "",
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_66264096d623f",
+                    "label": "Text Matomo anzeigen",
+                    "name": "showMatomo_policy",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "allow_in_bindings": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1
+                },
+                {
+                    "key": "field_662640ce4eae3",
+                    "label": "Text Matomo",
+                    "name": "matomo_policy",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_66264096d623f",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Diese Website verwendet Funktionen des Webanalysedienstes Matomo. Der Dienst wird von InnoCraft Ltd., 150 Willis St, 6011 Wellington, Neuseeland, bereitgestellt. Zur Gewährleistung des Datenschutzes nutzen wir die Option zur Anonymisierung der IP-Adressen. Dadurch werden Ihre IP-Adressen vor der Verarbeitung und Speicherung gekürzt, um Ihre Privatsphäre zu schützen. Matomo wird von uns beauftragt, um die Nutzung dieser Website auszuwerten, Berichte über Websiteaktivitäten zu erstellen und die Leistung von Online-Werbekampagnen zu analysieren und zu optimieren. Zu den verarbeiteten Daten gehören unter anderem Online-Kennungen (einschließlich Cookie-Kennungen), IP-Adressen, Gerätekennungen, Standortdaten, vom Nutzer vergebene Kennzeichnungen sowie Nutzungsdaten (z. B. Zeitpunkt und Dauer des Besuchs, ausgewählte Angebote). Weitere Informationen zum Umgang mit Nutzerdaten durch Matomo finden Sie in deren Datenschutzerklärung unter https:\/\/matomo.org\/privacy-policy\/. Sie können die Erfassung der durch Cookies erzeugten und auf Ihre Nutzung der Website bezogenen Daten durch Matomo verhindern, indem Sie den folgenden Opt-out-Link verwenden: [Opt-out-Link einfügen]. Eine Anleitung zum Deaktivieren des Trackings durch Matomo finden Sie hier: [Anleitung einfügen]. Die Beziehung zu Matomo basiert auf einer Auftragsdatenverarbeitung. Die Übermittlung von Daten an Matomo erfolgt auf Grundlage angemessener Garantien, insbesondere durch Abschluss der Standardvertragsklauseln gemäß Artikel 46 Absatz 2 Buchstabe c der Datenschutz-Grundverordnung (DSGVO). Die Daten werden regelmäßig (derzeit alle 26 Monate) gelöscht, um Ihre Privatsphäre zu schützen.",
+                    "maxlength": "",
+                    "allow_in_bindings": 1,
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_640a582bc06f1",
+                    "label": "Text GoogleAds anzeigen",
+                    "name": "showGoogleAds_policy",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "allow_in_bindings": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1
+                },
+                {
+                    "key": "field_640a5a018043c",
+                    "label": "Text Google Ads",
+                    "name": "googleAds_policy",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_640a582bc06f1",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Diese Website nutzt das Online-Werbeprogramm „Google AdWords“ und im Rahmen von Google AdWords das Conversion-Tracking. Das Google Conversion Tracking ist ein Analysedienst der Google Inc. (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA; „Google“). Wenn Sie auf eine von Google geschaltete Anzeige klicken, wird ein Cookie für das Conversion-Tracking auf Ihrem Rechner abgelegt. Diese Cookies verlieren nach maximal 90 Tagen ihre Gültigkeit. Wenn Sie bestimmte Internetseiten unserer Website besuchen und das Cookie noch nicht abgelaufen ist, kann Google und der Websitebetreiber erkennen, dass Sie auf die Anzeige geklickt haben und zu dieser Seite weitergeleitet wurden. Die Informationen, die mithilfe des Conversion-Cookies eingeholten werden, dienen dazu, Conversion-Statistiken zu erstellen. Hierbei erfährt der Websitebetreiber die Gesamtanzahl der Nutzer, die auf eine Anzeige geklickt haben und zu einer mit einem Conversion-Tracking-Tag versehenen Seite weitergeleitet wurden und\/oder verschiedene Handlungen auf der Seite ausgeführt haben. Der Website-Betreiber erhält jedoch keine Informationen, mit denen sich Nutzer persönlich identifizieren lassen. Wenn Sie nicht am Tracking teilnehmen möchten, können Sie dieser Nutzung widersprechen, indem Sie die Installation der Cookies durch eine entsprechende Einstellung Ihrer Browser Software verhindern (Deaktivierungsmöglichkeit). Sie werden sodann nicht in die Conversion-Tracking Statistiken aufgenommen. Weiterführende Informationen sowie die Datenschutzerklärung von Google finden Sie unter: <a href=\"http:\/\/www.google.com\/policies\/technologies\/ads\/\">http:\/\/www.google.com\/policies\/technologies\/ads\/<\/a>, <a href=\"http:\/\/www.google.de\/policies\/privacy\/\">http:\/\/www.google.de\/policies\/privacy\/<\/a>\r\nDie Beziehung zum Webanalyseanbieter basiert beim Einsatz des Google Adwords Conversion-Tracking auf einer Auftragsdatenverarbeitung. Die Übermittlung von Daten an den Auftragsverarbeiter basiert auf einem Angemessenheitsbeschluss er Europäischen Kommission (Selbstzertifizierung Privacy Shield). Google ist zudem verpflichtet, die Daten regelmäßig (derzeit alle 39 Monate) zu löschen.",
+                    "maxlength": "",
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_640a582ac06f0",
+                    "label": "Text SocialMedia anzeigen",
+                    "name": "showSocialMedia_policy",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "allow_in_bindings": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1
+                },
+                {
+                    "key": "field_640a5a4398894",
+                    "label": "Text Social Media",
+                    "name": "socialMedia_policy",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_640a582ac06f0",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Falls auf dieser Website Facebook Social Plugins zum Einsatz kommen, so werden diese von der Facebook Inc. (1 Hacker Way, Menlo Park, California 94025, USA) betrieben. Erkennbar sind die Einbindungen an dem Facebook-Logo bzw. an den Begriffen „Like“, „Gefällt mir“, „Teilen“ in den Farben Facebooks (Blau und Weiß). Informationen zu allen Facebook-Plugins finden Sie im folgenden Link: <a href=\"https:\/\/developers.facebook.com\/docs\/plugins\/\">https:\/\/developers.facebook.com\/docs\/plugins\/<\/a> Die Plugins werden erst aktiviert, wenn Sie auf die entsprechenden Schaltflächen klicken. Sofern diese ausgegraut angezeigt werden, sind die Plugins inaktiv. Sie haben die Möglichkeit, die Plugins bei jedem Besuch zu aktivieren.\r\nDie Plugins stellen eine direkte Verbindung zwischen Ihrem Browser und den Facebook-Servern her. Dies erfolgt erst nach der Aktivierung des Plugins. Der Websitebetreiber hat keinerlei Einfluss auf die Natur und den Umfang der Daten, welche das Plugin an die Server der Facebook Inc. übermittelt. Informationen dazu finden Sie hier: <a href=\"https:\/\/www.facebook.com\/help\/186325668085084\">https:\/\/www.facebook.com\/help\/186325668085084<\/a> Das Plugin informiert die Facebook Inc. darüber, dass Sie als Nutzer diese Website besucht haben. Es besteht hierbei die Möglichkeit, dass Ihre IP-Adresse gespeichert wird. Sind Sie während des Besuchs auf dieser Website in Ihrem Facebook-Konto eingeloggt, werden die genannten Informationen mit diesem verknüpft.",
+                    "maxlength": "",
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_640a582dc06f5",
+                    "label": "Text Rechtsgrundlage anzeigen",
+                    "name": "showLegalBasis_policy",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "allow_in_bindings": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1
+                },
+                {
+                    "key": "field_640a5a82209a7",
+                    "label": "Text Rechtsgrundlage",
+                    "name": "legalBasis_policys",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_640a582dc06f5",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Auf der Website werden Daten ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TKG 2003) verarbeitet.\u2028Die Datenverarbeitung (Webshop, Produktbewertungen, Buchungstool und Nutzeraccount) erfolgt auf Grundlage des Art 6 Abs. 1 lit. b) (Vertragserfüllungszwecke) DSGVO.\r\nIm Falle des Einsatzes von Analysetools erfolgt die Datenverwendung auf Grundlage des Art 6 Abs. 1 lit f) (berechtigtes Interesse) DSGVO. Das berechtigte Interesse an der Datenverwendung ist die Verbesserung des Webauftritts sowie die Erfolgsmessung von Online-Werbung.\r\nDer Einsatz von IT-Datensicherheitsmaßnahmen erfolgt ebenfalls auf Grundlage des Art 6 Abs. 1 lit f) (berechtigtes Interesse) DSGVO. Das berechtigte Interesse an der Datenverwendung ist die Absicherung der eigenen IT-Systeme.\r\nDer Einsatz von Social-Media-Plugins erfolgt nur nach Einwilligung. Rechtsgrundlage ist daher Art. 6 Abs. 1 lit a) DSGVO. Die Einwilligung ist bei jedem Website-Aufruf erneut zu erteilen.\r\nIhre Rechte\r\nIhnen stehen grundsätzlich die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit, Widerruf und Widerspruch zu. Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt oder Ihre datenschutzrechtlichen Ansprüche sonst in einer Weise verletzt worden sind, können Sie sich bei der Aufsichtsbehörde beschweren. In Österreich ist dies die Datenschutzbehörde.",
+                    "maxlength": "",
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "tsc-privacy"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "modified": 1760735081
+}

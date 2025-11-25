@@ -1,0 +1,182 @@
+@use "../variables" as vars;
+
+// menu button
+#menu-button {
+  border: none;
+  outline: none;
+  display: block;
+  height: vars.$nav-height-mobile;
+  cursor: pointer;
+  z-index: 2000;
+  background-color: transparent;
+  @media (min-width: vars.$breakpoint-nav) {
+    display: none;
+  }
+
+  .sign {
+
+    /* bg image buttom */
+    //background-image: url("assets/img/brush-dark.svg");
+    //background-size: cover;
+    //height: 30px;
+    // background-color: transparent;
+
+
+    /* classic burger button */
+    background-color: vars.$menu-button-color;
+    height: 2px;
+
+
+    display: block;
+    width: 30px;
+    top: 0;
+    right: 5px;
+    position: relative;
+    margin: vars.$menu-button-margin 0 vars.$menu-button-margin 20px;
+    border-radius: 2px;
+    transition: background-color 200ms linear, transform 300ms linear;
+
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      height: 2px;
+      border-radius: 2px;
+      position: absolute;
+      right: 0;
+      transition: transform 300ms linear;
+
+
+      /* image button */
+      // background-color: transparent;
+
+
+      /* classic menu button */
+      background-color: vars.$menu-button-color;
+    }
+
+
+    &:before {
+      width: 30px;
+
+      /* classic menu button */
+      transform: translateY(-8px);
+
+      /* image button */
+      //top:0;
+      // transform: translateY(-3px);
+    }
+
+    &:after {
+      width: 30px;
+
+      /* classic menu button */
+      transform: translateY(8px);
+
+      /* image button */
+      // transform: translateY(-3px);
+
+
+    }
+  }
+}
+
+
+
+
+
+/* Offen-Zustand des Menüs per Button */
+#menu-button[aria-expanded="true"] ~ #primary-nav {
+  opacity: 1;
+  pointer-events: auto;
+  left: 0;
+  height: 100vh;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Burger → X Animation beim geöffneten Zustand */
+#menu-button[aria-expanded="true"] .sign {
+  background-color: transparent;
+  transition: .3s all;
+}
+
+#menu-button[aria-expanded="true"] .sign::before {
+  transform: translateY(5px) rotate(-45deg);
+  background-color: vars.$menu-button-color;
+  width: 28px;
+}
+
+#menu-button[aria-expanded="true"] .sign::after {
+  transform: translateY(5px) rotate(45deg);
+  background-color: vars.$menu-button-color;
+  width: 28px;
+}
+
+
+
+
+// submenu-toggle
+/* Button-Grundlayout bleibt unverändert */
+.menu-toggle {
+  outline: none;
+  border: none;
+  position: absolute;
+  right: 1em;
+  top: 1px;
+  padding: 25px 11px 24px;
+  cursor: pointer;
+  background-color: rgba(vars.$nav-color, 0);
+  transition: background-color 250ms linear;
+
+  @media (min-width: vars.$breakpoint-nav) {
+    display: none;
+    padding: 3em 11px 24px;
+  }
+
+  em {
+    display: block;
+    position: relative;
+    width: 28px;
+    height: 0;
+
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 10px;
+      position: absolute;
+      transition: transform 200ms linear;
+      background-color: vars.$nav-color;
+    }
+
+    &::before {
+      left: 0;
+      transform: rotate(45deg) translateY(-8px);
+    }
+
+    &:after {
+      right: 0;
+      transform: rotate(-45deg) translateY(-8px);
+    }
+  }
+}
+
+/* NEU: Wenn das Untermenü geöffnet ist → Linien gerade stellen */
+.menu-toggle[aria-expanded="true"] em::before,
+.menu-toggle[aria-expanded="true"] em::after {
+  transform: rotate(0) translateY(-2px) ;
+  width: 11px;
+}
+/* Untermenü geöffnet → Linien gerade, zu einer Linie verbunden */
+.menu-toggle[aria-expanded="true"] em::before,
+.menu-toggle[aria-expanded="true"] em::after {
+  width: 10px;
+  transform: rotate(0) translateY(-2px);
+}
+.menu-toggle[aria-expanded="true"] em::before{
+  left:  4px;
+}
+.menu-toggle[aria-expanded="true"] em::after{
+  right: 4px;
+}

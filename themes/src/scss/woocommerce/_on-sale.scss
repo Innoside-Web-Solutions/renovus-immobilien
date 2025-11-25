@@ -1,0 +1,5 @@
+@use "../variables" as vars;
+
+.woocommerce ul.products li.product .onsale{
+  background-color: vars.$secondary;
+}

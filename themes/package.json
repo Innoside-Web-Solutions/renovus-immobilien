@@ -1,0 +1,33 @@
+{
+  "name": "inno-pro-npx",
+  "scripts": {
+    "dev": "mix",
+    "watch": "mix watch",
+    "prod": "cross-env NODE_ENV=production mix"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "devDependencies": {
+    "@babel/preset-react": "^7.27.1",
+    "@splidejs/splide": "^2.4.21",
+    "browser-sync": "^2.27.7",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "cpx": "^1.5.0",
+    "cross-env": "^7.0.3",
+    "laravel-mix": "^6.0.39",
+    "modernizr": "^3.11.7",
+    "npm-run-all": "^4.1.5",
+    "resolve-url-loader": "^3.1.4",
+    "rimraf": "^6.0.1",
+    "sass": "^1.32.11",
+    "sass-loader": "^11.1.1"
+  },
+  "dependencies": {
+    "fslightbox": "^3.7.4",
+    "gsap": "^3.13.0",
+    "lightbox": "^0.5.0",
+    "npx": "^10.2.2"
+  }
+}

@@ -1,0 +1,74 @@
+/*!
+Theme Name: Inno Pro
+Description: Hybrid-WordPress-Theme using theme.json
+Author: Innoside Web Solutions, Thomas Schreiber
+Author Uri: https://innoside.at/
+Theme Uri: https://innoside.at/
+Version: 1.0
+Requires at least: 6.0
+Requires PHP: > 8.2
+Text-Domain: tsc
+ */
+
+// core files
+@use "variables" as vars;
+@use "mixins" as mixins;
+@use "typography/flaticon" as flaticon;
+
+
+@use "base/spacings";
+@use"typography/fonts";
+@use "base/base";
+@use "typography/base-typography";
+
+@use "navigation/nav-settings";
+@use "navigation/navbar";
+@use "navigation/admin-bar";
+@use "navigation/brand";
+@use "navigation/animate-nav";
+@use "navigation/menu-buttons";
+@use "navigation/main-nav";
+@use "navigation/nav-social-icons";
+@use "navigation/side-nav";
+
+
+@use "typography/headlines";
+
+@use "typography/links";
+@use "typography/lists";
+@use "base/layout";
+@use "base/buttons" as buttons;
+@use "base/footer";
+@use "base/forms";
+@use "base/gutenberg";
+@use "base/images";
+@use "base/screen-reader";
+@use "base/scroll-top";
+@use "base/sidebar-menu";
+//@use "base/sidebar";
+
+
+@use "blocks/akkordeon";
+@use "blocks/icon-content-block";
+@use "blocks/image-teaser";
+@use "blocks/moving-overlay";
+@use "blocks/social-icons";
+@use "blocks/overlayed-video";
+//use "blocks/team";
+//use "blocks/text-img";
+@use "blocks/text-img-overlay";
+@use "blocks/video-header";
+@use "blocks/slider-header";
+@use "blocks/videotext";
+@use "blocks/inno-akkordeon";
+@use "blocks/testimonial-slider";
+
+@use "templates/contact-page";
+@use "templates/legals";
+
+//@use "posts/grid";
+//@use "posts/navigation";
+//@use "posts/single";
+
+
+

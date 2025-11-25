@@ -1,0 +1,35 @@
+@use "../variables" as vars;
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  line-height: vars.$base-line-height;
+  scroll-behavior: smooth;
+  font-size: vars.$base-font-size-desktop;
+
+  @media only screen and (max-width: vars.$sm - 1px) {
+    font-size: vars.$base-font-size-mobile;
+  }
+
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background-color: vars.$base-bg-color;
+  padding-top: vars.$nav-height-mobile !important;
+  overflow-x: hidden;
+  position: relative;
+  @media (min-width: vars.$breakpoint-nav) {
+    padding-top: vars.$nav-height-desktop !important;
+  }
+}
+
+
+
+

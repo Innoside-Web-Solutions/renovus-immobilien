@@ -1,0 +1,60 @@
+@use "../variables" as vars;
+
+#primary-nav {
+
+  .follow {
+    margin-top: 20px;
+    line-height: 58px;
+    height: 58px;
+    text-align: center;
+    margin-right: 1rem;
+    @media screen and (min-width: vars.$breakpoint-nav) {
+      text-align: left;
+    }
+    .links {
+
+      a {
+        color: #fff;
+        display: inline-block;
+        line-height: 58px;
+        height: 75px;
+        width: 25px;
+        margin-right: 20px;
+        text-align: center;
+        transition: 0.7s ease-in-out all;
+        text-decoration: none;
+
+        @media screen and (min-width: vars.$breakpoint-nav ){
+          line-height: 58px;
+          height: 58px;
+          width: 12px;
+          margin-left: 20px;
+          margin-right: 0;
+          color: vars.$nav-color-desktop;
+        }
+        i {
+          font-size: 18px;
+          color: vars.$nav-color;
+          @media screen and (min-width: vars.$breakpoint-nav) {
+            font-size: 15px;
+          }
+        }
+        &:hover {
+          i {
+            @media screen and (min-width: vars.$breakpoint-nav) {
+              color: vars.$nav-active-color-desktop;
+            }
+          }
+        }
+
+
+      }
+    }
+  }
+}
+
+@media (min-width: vars.$breakpoint-nav) {
+  #navbar.lighted .follow a i{
+    color: #fff;
+  }
+}

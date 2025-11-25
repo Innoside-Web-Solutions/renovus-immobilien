@@ -1,0 +1,41 @@
+{
+  "name": "acf/tsc-slider-header",
+  "title": "Slider Header",
+  "description": "Slider Header mit ACF-Inner-Block-Content. Gutenberg Content bitte einfach über den Slider ziehen, um diesen hinzuzufügen",
+  "style": [
+  ],
+  "category": "formatting",
+  "icon": "slides",
+  "keywords": [
+    "slide",
+    "header",
+    "pageheader",
+    "image"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "slider-header.php"
+  },
+  "supports": {
+    "anchor": true,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "ariaLabel": true,
+    "align": true
+  },
+  "allowedBlocks": [
+    "core/paragraph",
+    "core/heading",
+    "core/buttons",
+    "core/spacer",
+    "core/list",
+    "core/group",
+    "core/columns"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "acf/tsc-social-icons",
+  "title": "Social Icons",
+  "description": "",
+  "style": [],
+  "category": "tsc-blocks",
+  "icon": "share",
+  "keywords": [
+    "icon",
+    "social"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "social.php"
+  },
+  "supports": {
+    "align": ["left", "center", "right"]
+  }
+}

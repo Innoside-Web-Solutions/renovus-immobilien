@@ -1,0 +1,35 @@
+{
+  "name": "acf/tsc-videotext",
+  "title": "Videotext",
+  "description": "A custom video text block that uses ACF fields.",
+  "style": [
+  ],
+  "category": "media",
+  "icon": "text-page",
+  "keywords": [
+    "video",
+    "text",
+    "videotext"
+
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "videotext.php"
+  },
+  "supports": {
+    "anchor": true,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "color": {
+      "background": false,
+      "text": false
+    },
+    "ariaLabel": true,
+    "align": true
+  },
+  "allowedBlocks": [
+
+  ]
+}

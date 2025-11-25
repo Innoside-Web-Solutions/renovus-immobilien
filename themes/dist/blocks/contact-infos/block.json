@@ -1,0 +1,31 @@
+{
+  "name": "acf/contact-infos",
+  "title": "Kontaktinfos",
+  "description": "Returns contact infos issued in customizer",
+  "style": [
+  ],
+  "category": "formatting",
+  "icon": "text-page",
+  "keywords": [
+    "Kontakt",
+    "Company",
+    "Contact",
+    "Unternehmen"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "contact-infos.php"
+  },
+  "supports": {
+    "anchor": true,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "ariaLabel": true
+  }
+}

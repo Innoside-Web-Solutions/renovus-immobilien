@@ -1,0 +1,96 @@
+@use "../variables" as vars;
+
+
+%woocommerce-button {
+  word-wrap: break-word;
+  text-decoration: none;
+  margin-right: 10px;
+  min-height: 40px;
+  line-height: 38px;
+  transition: all 400ms ease-out;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid;
+  border-radius: 0;
+  margin-bottom: 0.5em;
+  display: block;
+  color: vars.$base-bg-color;
+  background-color: vars.$third;
+  border-color: vars.$third;
+
+  @media only screen and (min-width: vars.$xxs) {
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  &:hover {
+    text-decoration: none;
+    background: vars.$base-bg-color;
+    border-color: vars.$third;
+    color: vars.$secondary;
+  }
+
+
+  &:active {
+    border-color: vars.$base-color;
+  }
+}
+
+.woocommerce-Address-title a,
+.woocommerce a.button,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce button.button,
+.woocommerce .cart .button,
+.woocommerce button.button:disabled[disabled],
+.edit {
+  @extend %woocommerce-button;
+
+  &:hover {
+    text-decoration: none;
+    background: vars.$base-bg-color;
+    border-color: vars.$third;
+    color: vars.$third;
+    opacity: 1;
+  }
+
+  &:active {
+    border-color: vars.$base-color;
+  }
+
+}
+
+.woocommerce a.button.alt {
+  display: block !important;
+  font-size: 1.2em;
+  //padding: 0.75em;
+}
+
+.woocommerce-account .addresses .title .edit {
+  padding: 0 5px;
+  width: 100%;
+  @media only screen and (min-width: vars.$xxs) {
+    margin-left: 1em;
+    margin-top: 1.25em;
+    float: left;
+    width: auto;
+  }
+  @media only screen and (min-width: vars.$sm) {
+    float: left;
+    display: block;
+    width: 100%;
+    margin: 0 0 1em;
+
+  }
+  @media only screen and (min-width: vars.$lg) {
+    float: none;
+    margin-top: 1.25em;
+    margin-left: 1em;
+    margin-bottom: 0;
+    display: inline-block;
+    width: auto;
+  }
+
+}

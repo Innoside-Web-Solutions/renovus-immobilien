@@ -1,0 +1,82 @@
+@use "../variables" as vars;
+
+$sign-color: vars.$secondary;
+$nav-color: vars.$third;
+
+
+.tsc-testimonial-slider {
+
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+
+  // === Inhalt ===
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 0 1rem;
+    position: relative;
+
+    @media (min-width: vars.$sm) {
+      padding: 1rem 5rem;
+    }
+  }
+
+  // === Zitatzeichen / Icon ===
+  .testimonial-sign {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 5vw, 3.125rem);
+    color: $sign-color;
+    opacity: 0.5;
+  }
+
+  // === Splide Layer (Navigation & Pagination) ===
+  .splide__arrow,
+  .splide__pagination {
+    z-index: 6;
+  }
+
+  // === Navigation ===
+  .splide__arrow {
+    background: vars.$lighted;
+    border: none;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: background 0.3s ease;
+
+    svg {
+      fill: $nav-color;
+      transition: fill 0.3s ease;
+    }
+
+    &:hover {
+      background: $nav-color;
+
+      svg {
+        fill: $nav-color;
+      }
+    }
+  }
+
+  // === Pagination ===
+  .splide__pagination {
+    display: flex;
+    justify-content: center;
+    gap: .7rem;
+
+    button {
+      border-radius: 50%;
+      margin: 0;
+      background: vars.$primary;
+      transition: background 0.3s ease;
+      &.is-active {
+        transform: scale(1) !important;
+        background: $nav-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "acf/tsc-block-team",
+  "title": "Team",
+  "description": "Team Section",
+  "style": [],
+  "category": "tsc-blocks",
+  "icon": "slides",
+  "keywords": [
+    "team",
+    "member"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "team.php"
+  },
+  "supports": {
+    "anchor": true,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "align": [
+      "wide"
+    ],
+    "ariaLabel": true
+  }
+}

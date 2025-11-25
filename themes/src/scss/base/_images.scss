@@ -1,0 +1,37 @@
+@use "../variables" as vars;
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  width: 100%;
+  &[src$=".svg"] {
+    width: 100%;
+  }
+}
+
+figure {
+  margin: 0;
+}
+
+
+
+
+.is-style-fancy-img-rounded {
+  border-radius: 30% 70% 70% 30% / 30% 55% 45% 70%;
+  overflow: hidden; /* Wichtig für Bilder */
+}
+.is-style-fancy-img-rounded-2 {
+  border-radius: 56% 44% 68% 32% / 54% 26% 74% 46%;
+  overflow: hidden; /* Wichtig für Bilder */
+}
+
+.is-style-img-top-rounded{
+  border-radius: 999px 999px 0 0 ;
+  overflow: hidden;
+}
+
+.wp-block-image{
+  border-radius: vars.$image-radius;
+  overflow: hidden;
+}

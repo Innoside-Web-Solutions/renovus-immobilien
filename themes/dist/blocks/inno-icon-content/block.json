@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/inno-icon-content",
+  "version": "0.1.0",
+  "title": "Icon Content Block",
+  "category": "widgets",
+  "icon": "format-image",
+  "description": "Block mit Icon links und rechts ",
+  "example": {},
+  "attributes": {
+    "imageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "imageAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "heading": {
+      "type": "string",
+      "source": "html",
+      "selector": ".inno-icon-content__strong",
+      "default": "Überschrift"
+    },
+    "text": {
+      "type": "string",
+      "source": "html",
+      "selector": ".inno-icon-content__text",
+      "default": "Hier steht der Beschreibungstext."
+    }
+  },
+  "supports": {
+    "html": false,
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "textdomain": "tsc",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

@@ -1,0 +1,29 @@
+{
+  "name": "acf/imageteaser",
+  "title": "Image Teaser",
+  "description": "A custom Image Teaser block that uses ACF fields.",
+  "style": [
+  ],
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": [
+    "image",
+    "picture",
+    "bild",
+    "teaser"
+  ],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "image-teaser.php"
+  },
+  "supports": {
+    "anchor": true,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "ariaLabel": true
+  },
+  "allowedBlocks": [
+  ]
+}

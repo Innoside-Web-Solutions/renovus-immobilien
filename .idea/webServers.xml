@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="8bca8b9e-e90a-40c0-93b7-3c7443a178a8" name="dev">
+        <fileTransfer accessType="SFTP" host="dedi7874.your-server.de" port="22" sshConfigId="3328ac50-efc5-4b22-bc82-518cd1682e44" sshConfig="innoside@dedi7874.your-server.de:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

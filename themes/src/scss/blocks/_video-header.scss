@@ -1,0 +1,84 @@
+@use "../variables" as vars;
+@use "../mixins" as mixins;
+
+
+$videoheader-height: 100vh;
+$overlay-opacity: .9;
+$video-header-content-width: 100%;
+
+.tsc-video-header {
+ @include mixins.section-spacing();
+
+  position: relative;
+  overflow: hidden;
+  max-height: $videoheader-height;
+
+
+  video{
+    width: auto;
+    height: 75%;
+    position: relative;
+    left: -100vw;
+    @media (min-width: vars.$xs) {
+      left: -75%;
+    }
+    @media (min-width: vars.$sm) {
+      left: -50%;
+
+    }
+    @media (min-width: vars.$md) {
+      left: unset;
+      width: 100%;
+      height: auto;
+    }
+
+  }
+  .video-overlay {
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: $overlay-opacity;
+    // bg-color inline - acf field
+  }
+
+  margin-top: 0 !important;
+  @media (min-width: vars.$md) {
+    margin-top: 0 !important;
+  }
+
+  &.no-body-spacing {
+    margin-top: - vars.$nav-height-mobile !important;
+    @media (min-width: vars.$breakpoint-nav) {
+      margin-top: - vars.$nav-height-desktop !important;
+
+    }
+  }
+
+  .video-content {
+    @include mixins.container-spacing();
+
+    position: absolute;
+    padding: 5%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    .acf-innerblocks-container{
+      width: 100%;
+    }
+
+    * {
+      color: inherit;
+    }
+  }
+}

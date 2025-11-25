@@ -1,0 +1,53 @@
+@use "../variables" as vars;
+@use "blocks/editor-video-header";
+
+
+.block-teaser,
+.block-worldwide {
+    .wrapper {
+        padding-right: vars.$container-padding-desktop;
+        padding-left: vars.$container-padding-desktop;
+        max-width: vars.$container-width-desktop;
+    }
+}
+
+.acf-block-body:not(.wp-block-acf-tsc-social-icons){
+    border: 1px solid vars.$lighted;
+    //background-color: vars.$lighted;
+}
+
+.wp-block-post-title{
+    background-color: vars.$primary;
+    color: #fff;
+    padding: 1rem;
+    max-width: unset !important;
+}
+
+.wp-block-acf-tsc-slider-header {
+    padding: 3rem 1rem;
+    position: relative;
+
+    *:not(.wp-block-button__link) {
+        color: vars.$darken !important;
+
+    }
+
+
+    &:before{
+        content: "innoSIDE Slider-Header";
+        margin-left: .5rem;
+        padding: .5rem;
+        font-size: .8rem;
+        background-color: vars.$primary;
+        color: #fff;
+        position: absolute;
+        bottom: -1rem;
+        left: 0;
+        z-index: 1;
+    }
+
+
+
+
+
+}

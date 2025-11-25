@@ -1,0 +1,88 @@
+$login-primary: #fff;
+$login-secondary: #1F2128;
+
+
+body.login {
+  //background-color: $login-primary;
+  //background-image: url("../images/login.jpg");
+
+
+
+  #nav,
+  #backtoblog {
+    a {
+      color: $login-primary;
+      background-color: rgba(0,0,0,0.7);
+      padding: 0.5em;
+      &:hover{
+        color: $login-secondary;
+        text-decoration: underline;
+      }
+    }
+  }
+
+
+  #login {
+    padding: 2%;
+    h1 {
+      display: none;
+    }
+
+
+    svg, img{
+      display: block;
+      max-width: 100px;
+      width: 100%;
+      height: auto;
+      margin: 2em auto;
+    }
+
+    form {
+      border: 3px solid $login-primary;
+
+      input:focus {
+        border: 1px solid $login-primary;
+      }
+
+    }
+
+    .button-primary {
+      border: 1px solid $login-primary;
+      background: $login-secondary;
+      color: $login-primary;
+      text-shadow: none;
+      box-shadow: none;
+
+      &:hover {
+        background: darken($login-secondary, 10%);
+        color: $login-primary;
+      }
+    }
+  }
+
+  .privacy-policy-link{
+    color: $login-primary;
+    background-color: rgba(0,0,0,0.7);
+    padding: 0.5em;
+  }
+
+  .creator {
+    max-width: 300px;
+    margin: 0 auto ;
+    padding: 0 24px;
+    color: $login-primary;
+
+    small {
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    .creator-logo {
+      display: block;
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: $login-primary;
+      opacity: 0.85;
+    }
+  }
+}

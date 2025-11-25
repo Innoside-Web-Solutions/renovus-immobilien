@@ -1,0 +1,36 @@
+{
+  "name": "acf/tsc-text-image",
+  "title": "Text Image Block",
+  "description": "A custom text-image block",
+  "style": [
+  ],
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": [
+    "image",
+    "text"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "text-image.php"
+  },
+  "supports": {
+    "anchor": true,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "ariaLabel": true
+  },
+  "allowedBlocks": [
+    "core/paragraph",
+    "core/heading",
+    "core/button",
+    "core/spacer",
+    "core/list"
+  ]
+}

@@ -1,0 +1,121 @@
+@use "../variables" as vars;
+
+
+.tsc-icon-image-teaser {
+  max-width: 430px;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background-color: #fff;
+  box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+
+  h3 {
+    font-size: 1.05rem;
+  }
+
+
+  .content-front {
+    padding: 1.2rem;
+    opacity: 1;
+    transition: 0.3s all ease-in-out;
+    z-index: -2;
+
+    figure {
+      width: 70px;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: vars.$secondary;
+        z-index: -1;
+        opacity: .3;
+        border-radius: 50%;
+      }
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  .content-hover {
+    padding: 1.2rem;
+    transition: 0.3s all ease-in-out;
+    color: #fff !important;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+    overflow: hidden;
+    opacity: 0;
+
+    &:before {
+      content: "";
+      background-color: rgba(0, 0, 0, .85);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+    }
+
+    p, span {
+      color: #fff !important;
+      position: relative;
+      z-index: 1;
+    }
+
+
+  }
+
+  a {
+    display: block;
+    color: vars.$base-color;
+  }
+
+  a:hover,
+  a:focus,
+  a:active {
+    .content-front {
+      opacity: 0;
+      z-index: -1;
+    }
+
+    .content-hover {
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      h3, p, span {
+        color: #fff !important;
+      }
+    }
+  }
+
+  .more-arrow {
+    position: relative;
+    top: 3px;
+
+  }
+}

@@ -1,0 +1,35 @@
+.single-post {
+
+
+    .title {
+        font-weight: bold;
+
+
+        + h1 {
+            margin-top: .3em;
+        }
+    }
+
+
+    #content {
+        margin-top: 3em;
+    }
+
+    /*
+    .meta {
+        color: lighten(vars.$base-color, 15%);
+
+        .date, .category, .tags {
+            margin-right: 1em;
+        }
+    }
+
+    .post-header {
+        margin-bottom: 3em;
+    }
+
+    .post-footer {
+        margin: 3em 0;
+    }
+     */
+}

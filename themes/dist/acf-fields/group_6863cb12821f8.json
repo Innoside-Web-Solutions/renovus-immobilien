@@ -1,0 +1,72 @@
+{
+    "key": "group_6863cb12821f8",
+    "title": "Overlay Video",
+    "fields": [
+        {
+            "key": "field_6863cb128867a",
+            "label": "Header Video",
+            "name": "header_video",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "Bitte laden Sie hier das Video für den Pageheader hoch",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "mp4, webm, ogv",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6863cb63f5072",
+            "label": "Overlay Image",
+            "name": "overlay_img",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/tsc-overlay-video"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1758267305
+}

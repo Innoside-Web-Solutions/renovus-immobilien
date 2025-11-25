@@ -1,0 +1,173 @@
+@use "../variables" as vars;
+@use "../mixins" as mixins;
+
+
+
+#content {
+  min-height: 60vh;
+  > div:first-child:not(.wp-block-cover.alignfull):not(.wp-block-image.alignfull):not(.tsc-slider-header) {
+    margin-top: 2rem;
+    @media (min-width: vars.$md) {
+      //margin-top: 6rem;
+      margin-top: 2.5rem;
+    }
+  }
+
+  .has-background:not(.alignfull):not(.wp-block-gallery):not(.wp-block-separator):not(.wp-block-button__link):not(.wp-block-media-text){
+    padding: vars.$background-spacing-mobile;
+    @media screen and (min-width: vars.$breakpoint-nav) {
+      padding: calc(#{vars.$background-spacing-mobile} * 3);
+    }
+
+    &.wp-block-columns{
+      @media screen and (min-width: vars.$breakpoint-nav) {
+        padding: vars.$background-spacing-desktop;
+      }
+    }
+
+    a:not(.btn):not(.btn-primary):not(.is-style-btn-primary):not(.btn-secondary):not(.is-style-btn-secondary) {
+      //color: inherit;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+  }
+
+
+  // mixins.@include section-spacing();
+  > .wp-block-group {
+    @include mixins.section-spacing();
+    min-height: vars.$section-min-height;
+  }
+
+  > .wp-block-cover {
+    @include mixins.section-spacing();
+  }
+
+  // Background Cover padding gleich wie bei Section
+  > .wp-block-cover:not(.is-style-no-section-padding) > .wp-block-cover__inner-container {
+    padding-top: calc(#{vars.$background-spacing-mobile});
+    padding-bottom: calc(#{vars.$background-spacing-mobile});
+    @media screen and (min-width: vars.$breakpoint-nav) {
+      padding-top: calc(#{vars.$background-spacing-mobile} * 3);
+      padding-bottom: calc(#{vars.$background-spacing-mobile} * 3);
+    }
+    @media screen and (min-width: vars.$breakpoint-nav) {
+      padding-top: vars.$background-spacing-desktop;
+      padding-bottom: vars.$background-spacing-desktop;
+    }
+  }
+
+ > .has-background.wp-block-group {
+    padding-top: vars.$background-spacing-mobile;
+    padding-bottom: vars.$background-spacing-mobile;
+    @media screen and (min-width: vars.$sm) {
+      padding-top: vars.$background-spacing-desktop;
+      padding-bottom: calc(#{vars.$background-spacing-desktop});
+    }
+  }
+}
+
+.alignfull {
+@include mixins.alignfull();
+
+  &.has-background,
+  &.wp-block-cover {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.alignwide {
+@include mixins.alignwide();
+}
+
+.container,
+.alignfull:not(.tsc-overlay-video):not(.tsc-video-header):not(.wp-block-image):not(.wp-block-cover):not(.wp-block-media-text):not(.tsc-video-text-banner):not(.tsc-slider-header) > *,
+{
+  @include mixins.container-spacing();
+
+}
+
+
+.wp-block-cover.alignfull .wp-block-cover__inner-container{
+  @include container-spacing();
+}
+
+
+.container-small{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+.wp-block-columns {
+  gap: vars.$column-gap;
+  @media screen and (min-width: vars.$breakpoint-nav) {
+    gap: calc(#{vars.$column-gap} * 2);
+  }
+
+
+  &.is-style-reverse {
+    flex-wrap: wrap-reverse !important;
+  }
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+.box-shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) !important;
+}
+
+.no-gap-mobile {
+  @media screen and (max-width: 781px) {
+    gap: 0 !important;
+  }
+}
+
+.alignfull-right,
+.is-style-alignfull-right {
+  @media (min-width: vars.$wp-col-break) {
+    margin-left: unset !important;
+    padding-right: 0 !important;
+    margin-right: calc(50% - 50vw) !important;
+    min-width: calc(50vw - 2rem) !important;
+    width: calc(50vw - 2rem) !important;
+  }
+}
+
+.alignfull-left,
+.is-style-alignfull-left {
+  @media (min-width: vars.$wp-col-break) {
+    margin-right: unset !important;
+    padding-left: 0 !important;
+    margin-left: calc(50% - 50vw) !important;
+    min-width: calc(50vw - 2rem) !important;
+    width: calc(50vw - 2rem) !important;
+
+  }
+}
+
+
+/*
+@media (max-width: calc(#{vars.$wp-col-break} - 1px)) {
+  margin-left: -#{vars.$container-padding-mobile} !important;
+  margin-right: -#{vars.$container-padding-mobile} !important;
+}
+*/
+
+
+
+// 4 video-header & slider header
+.no-body-spacing {
+    margin-top: - vars.$nav-height-mobile !important;
+    @media (min-width: vars.$breakpoint-nav) {
+      margin-top: - vars.$nav-height-desktop !important;
+
+    }
+  }

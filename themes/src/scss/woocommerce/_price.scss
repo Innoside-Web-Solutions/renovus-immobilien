@@ -1,0 +1,7 @@
+@use "../variables" as vars;
+
+
+
+.woocommerce ul.products li.product .price {
+  color: vars.$primary;
+}

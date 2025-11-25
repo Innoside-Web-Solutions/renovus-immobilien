@@ -1,0 +1,30 @@
+{
+  "name": "acf/logocarousel",
+  "title": "Logo Carousel",
+  "description": "A Logo-Carousel block that uses ACF fields.",
+  "style": [
+  ],
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": [
+    "logo",
+    "brand",
+    "image",
+    "bild",
+    "slider"
+  ],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "logo-carousel.php"
+  },
+  "supports": {
+    "anchor": true,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "ariaLabel": true
+  },
+  "allowedBlocks": [
+  ]
+}

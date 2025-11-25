@@ -1,0 +1,374 @@
+@use "../variables" as vars;
+
+
+#primary-nav {
+  position: fixed;
+  top: vars.$nav-height-mobile;
+  width: 100%;
+  left: 0;
+  height: 0;
+  overflow-y: auto;
+  background-color: vars.$nav-bg-color;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.35s ease-in-out;
+  z-index: 1000;
+
+  ul.links {
+    margin: 3rem 0 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: vars.$darken;
+    li {
+        padding: 1rem;
+      a {
+
+
+        i {
+          color: vars.$base-bg-color;
+          font-size: 1.5rem
+        }
+      }
+    }
+
+    @media (min-width: vars.$breakpoint-nav) {
+      position: relative;
+      height: vars.$nav-height-desktop;
+      margin: 0 0 0 1rem ;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: .7rem;
+      background-color: transparent;
+      li {
+        padding: .5rem;
+        a {
+
+          i {
+            font-size: .9rem;
+            color: vars.$nav-color-desktop;
+
+          }
+        }
+      }
+    }
+
+  }
+
+
+  @media only screen and (min-width: vars.$sm) {
+    width: 50%;
+  }
+
+  @media (min-width: vars.$breakpoint-nav) {
+    width: 100%;
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    height: vars.$nav-height-desktop;
+    overflow: visible;
+    opacity: 1;
+    pointer-events: auto;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+
+  .nav-menu {
+    padding: 1rem 1rem 2rem 2.5rem;
+    @media (min-width: vars.$sm) {
+      padding: 2em vars.$nav-padding-desktop;
+    }
+    @media (min-width: vars.$breakpoint-nav) {
+      display: inline-block;
+      padding: 0;
+      margin-top: vars.$desktop-menu-margin-top;
+    }
+
+    li, a {
+      letter-spacing: vars.$nav-font-letter-spacing;
+    }
+
+
+    a {
+      display: block;
+      text-decoration: none;
+
+    }
+
+    li {
+      position: relative;
+      @media (min-width: vars.$breakpoint-nav) {
+        white-space: nowrap;
+      }
+    }
+
+
+    > li {
+      @media (min-width: vars.$breakpoint-nav) {
+        display: inline-block;
+        border: none;
+        background-color: transparent;
+        margin-right: 1.5em;
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+
+      > a {
+        position: relative;
+        height: 40px;
+        line-height: 40px;
+        display: flex;
+        align-items: center;
+        //justify-content: center;
+        font-size: vars.$mobile-nav-font-size;
+        font-weight: vars.$nav-mobile-font-weight;
+
+        color: vars.$nav-color;
+
+        &:active {
+          color: vars.$nav-active-color;
+        }
+
+        @media (min-width: vars.$breakpoint-nav) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: vars.$nav-height-desktop;
+          line-height: vars.$nav-height-desktop;
+          font-size: vars.$desktop-nav-font-size;
+          font-weight: vars.$nav-desktop-font-weight;
+          color: vars.$nav-color-desktop;
+
+
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: 22px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: transparent;
+            transition: top 0.22s linear, width 0.42s ease-in, left 0.4s ease-in;
+          }
+
+          &:hover {
+            color: vars.$nav-active-color-desktop;
+
+            &:after {
+              width: 25px;
+              //transition: width 0.35s ease-in, left 0.35s ease-in;
+              background-color: vars.$nav-active-color-desktop;
+
+            }
+          }
+
+        }
+
+
+      }
+
+      // NAV CTA
+
+        &:last-child {
+          a {
+            position: relative;
+            background-color: vars.$nav-cta-bg !important;
+            color: vars.$nav-cta-color !important;
+            height: vars.$nav-cta-height;
+            line-height: vars.$nav-cta-height;
+            border-radius: vars.$button-radius;
+            //line-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            z-index: 0;
+
+            &:after {
+              content: unset;
+            }
+
+            &:hover {
+              opacity: .7;
+            }
+          }
+        }
+
+
+
+      // CURRENT MENU ITEMS
+      &.current-menu-item > a {
+        color: vars.$nav-active-color;
+        font-weight: vars.$nav-active-font-weight;
+        @media (min-width: vars.$breakpoint-nav) {
+          color: vars.$nav-active-color-desktop;
+          font-weight: vars.$nav-desktop-active-font-weight;
+          &:hover {
+            color: vars.$nav-active-color-desktop;
+
+            &:after {
+              // NO LINE ANIMATION ON CURRENT MENU ITEM
+              width: 0 !important;
+            }
+          }
+        }
+
+      }
+
+      &.current-menu-parent > a {
+        @media (min-width: vars.$breakpoint-nav) {
+          color: vars.$nav-active-color-desktop;
+          &:hover {
+            color: vars.$nav-active-color-desktop;
+
+            &:after {
+              width: 0 !important;
+            }
+          }
+        }
+      }
+
+
+      /*========================================
+      =            SUBMENU STYLES             =
+      ========================================*/
+
+      > .sub-menu {
+        display: none;
+        padding-bottom: 1em;
+        padding-left: 0;
+        background-color: vars.$subnav-mobile-bg-color;
+
+        @media (min-width: vars.$breakpoint-nav) {
+          padding: 1rem;
+          background-color: vars.$subnav-desktop-bg-color;
+          display: block;
+          min-width: 180px;
+          position: absolute;
+          top: calc(100% - 1px);
+          left: 0;
+          z-index: 1;
+          opacity: 0;
+          pointer-events: none;
+          box-shadow: 10px 10px 12px -6px rgba(0, 0, 0, 0.2);
+          &:before {
+            content: "";
+            top: -15px;
+            left: 25px;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 12px 16px 12px;
+            border-color: transparent transparent vars.$subnav-desktop-bg-color transparent;
+
+          }
+
+        }
+
+        li, a {
+          color: vars.$subnav-mobile-color;
+          font-size: vars.$mobile-nav-font-size * 0.9;
+          @media (min-width: vars.$breakpoint-nav) {
+            color: vars.$subnav-desktop-color;
+            font-size: vars.$desktop-subnav-font-size;
+
+          }
+        }
+
+        li {
+          height: 0;
+          transform: scaleY(0);
+
+          @media (min-width: vars.$breakpoint-nav) {
+            transform: none;
+            height: auto;
+            background-color: vars.$subnav-desktop-bg-color;
+          }
+
+          &.current-menu-item > a {
+            color: vars.$subnav-mobile-active-color;
+            font-weight: vars.$nav-active-font-weight;
+            @media (min-width: vars.$breakpoint-nav) {
+              color: vars.$subnav-active-color-desktop;
+            }
+          }
+        }
+
+        a {
+          line-height: 1.2;
+          padding: .7em 0 .7em .7em;
+          color: vars.$subnav-mobile-color;
+
+          &:active {
+            color: vars.$subnav-mobile-active-color;
+          }
+
+          @media (min-width: vars.$breakpoint-nav) {
+            &:hover {
+              color: vars.$subnav-active-color-desktop;
+            }
+          }
+
+          @media (min-width: vars.$breakpoint-nav) {
+            padding: .7em 1rem;
+            color: vars.$subnav-desktop-color;
+          }
+        }
+
+
+      }
+
+      /* Toggle-Zustand über Button-Attribut statt Checkbox */
+      .menu-toggle[aria-expanded="true"] {
+        /* Icon-Animation wie bisher */
+        em:before,
+        em:after {
+          transform: rotate(0) translateY(-2px);
+        }
+      }
+
+      /* Submenü zeigen, wenn geöffnet (mobile) */
+      .menu-toggle[aria-expanded="true"] ~ .sub-menu {
+        display: block;
+
+        li {
+          @media (max-width: #{vars.$breakpoint-nav - 1px}) {
+            height: auto;
+            transform: scaleY(1);
+          }
+        }
+      }
+
+      &:hover > .sub-menu {
+        opacity: 1;
+        pointer-events: auto;
+        z-index: -1;
+        animation: animateSubMenu .4s;
+      }
+    }
+
+  }
+}
+
+
+
+
+
+
+

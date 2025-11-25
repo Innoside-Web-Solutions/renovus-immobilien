@@ -1,0 +1,14 @@
+
+@use "../../variables" as vars;
+
+
+.wp-block-acf-tsc-testimonial-slider {
+  padding: 1rem;
+  text-align: center;
+  .testimonial-sign{
+    color: vars.$secondary;
+  }
+  ul{
+    list-style-type: none !important;
+  }
+}

@@ -1,0 +1,66 @@
+@use "../variables" as vars;
+
+.woocommerce,
+.woocommerce-page {
+
+  form  {
+    font-size: 1em;
+    letter-spacing: 1px;
+    max-width: 750px;
+
+    h3, .h3 {
+      color: vars.$primary;
+      font-size: 1em;
+    }
+
+    .form-row.form-row-first,
+    .form-row.form-row-last {
+      @media only screen and (max-width: vars.$xs) {
+        width: 100%;
+        float: none !important;
+      }
+    }
+
+
+    label {
+      opacity: 0.8;
+      color: vars.$third;
+      font-weight: bold;
+    }
+
+    input:not(input[type="number"]) {
+      margin: 0;
+      padding: 20px 10px;
+    }
+
+    input[type="text"] {
+      padding: 30px 10px;
+    }
+
+    textarea{
+      font-family: inherit;
+    }
+
+
+  } /* form end*/
+
+  form.checkout{
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  form.woocommerce-cart-form{
+    max-width: none;
+    input {
+      margin: 0.5em 0;
+      padding: 0;
+    }
+
+  }
+
+
+
+}
+
+#coupon_code{
+  width: 180px !important;
+}

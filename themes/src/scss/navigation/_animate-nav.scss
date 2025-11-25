@@ -1,0 +1,16 @@
+@use "../variables" as vars;
+
+@media (min-width: vars.$breakpoint-nav) {
+
+  #navbar {
+    &.hide-menu {
+      top: - 150px;
+      transition: .8s all ease-in-out;
+    }
+
+  }
+
+}
+
+
+

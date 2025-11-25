@@ -1,0 +1,44 @@
+@use "../variables" as vars;
+
+
+
+body {
+  font-family: vars.$primary-font-family;
+  font-weight: vars.$base-font-weight;
+  color: vars.$base-color;
+
+}
+
+
+b, strong {
+  font-weight: 700;
+}
+
+
+.has-background {
+  h1, h2, h3, h4, h5, h6 {
+    color: vars.$headline-color;
+  }
+}
+
+.has-darken-background{
+  h1, h2, h3, h4, h5, h6 {
+    color: vars.$base-bg-color;
+  }
+}
+
+.has-text-color{
+  h1, h2, h3, h4, h5, h6 {
+    color: inherit;
+  }
+}
+
+.has-2-rem-font-size{
+  font-size: clamp(1.25rem, calc(1rem + 2.5vw), 2rem) !important;
+}
+.has-2-5-rem-font-size{
+  font-size: clamp(1.5rem, calc(1rem + 2.5vw), 2.5rem) !important;
+}
+.has-3-rem-font-size{
+  font-size: clamp(2rem, calc(1rem + 2.5vw), 3rem) !important;
+}

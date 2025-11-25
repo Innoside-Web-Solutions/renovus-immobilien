@@ -1,0 +1,48 @@
+@use "../../variables" as vars;
+
+.inno-icon-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem; // Abstand zwischen Icon und Text
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  background-color: transparent;
+
+  // Bild/Icon links
+  &__image-wrapper {
+      width: 32px;
+    height: 32px;
+    button{
+      box-shadow: 1px solid vars.$primary !important;
+      color: vars.$primary !important;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+  }
+
+  // Textcontainer rechts
+  &__body {
+    flex: 1 1 auto;
+    min-width: 0; // für sauberes Zeilenumbruchverhalten
+  }
+
+  &__strong {
+    display: block;
+    font-weight: 500;
+    font-size: 1.15rem;
+    margin-bottom: 0.25rem;
+    color: vars.$headline-color;
+
+  }
+
+  &__text {
+    margin: 0;
+    color: vars.$base-color;
+
+  }
+}

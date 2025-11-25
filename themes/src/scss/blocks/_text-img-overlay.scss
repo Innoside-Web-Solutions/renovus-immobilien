@@ -1,0 +1,63 @@
+@use "../variables" as vars;
+
+
+.tsc-block-txt-img-overlay {
+  position: relative;
+
+  
+  img {
+    width: 100%;
+    z-index: -2;
+    position: relative;
+    @media (min-width: vars.$md) {
+      width: 80%;
+    }
+  }
+  .txt-img-ol-content {
+    position: relative;
+    bottom:0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+
+    @media (min-width: vars.$md) {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      top: 70%;
+    }
+    @media (min-width: vars.$md) {
+      position: absolute;
+      bottom: 10%;
+      top: 10%;
+      right: 0;
+      width: 80%;
+    }
+
+    @media (min-width: vars.$lg) {
+      width: 50%;
+    }
+
+
+    h1, h2, h3, h4, h5, h6{
+      color: #fff;
+      margin-top: 0;
+    }
+    &:after{
+      position: absolute;
+      content: "";
+      z-index: -1;
+      top: 0;
+      bottom:0;
+      right: 0;
+      left:0;
+      background-color: vars.$primary;
+    }
+    a{
+      color: #fff;
+      text-decoration: underline;
+
+    }
+  }
+
+}

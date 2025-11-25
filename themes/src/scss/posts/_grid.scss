@@ -1,0 +1,123 @@
+@use "../variables" as vars;
+
+
+// POSTS
+$post-item-bg: transparent;
+$post-color: vars.$darken;
+$post-button-color: vars.$primary;
+$post-meta-font-size: 0.9rem;
+$post-item-max-width: 300px;
+
+
+.post-item {
+  width: 100%;
+  max-width: $post-item-max-width;
+  overflow: hidden;
+
+  @media (min-width: vars.$xs) {
+    width: 50%;
+  }
+  @media (min-width: vars.$sm) {
+    width: calc(100% / 3);
+  }
+
+  .post-title {
+    margin: 0 0 1rem;
+    color: $post-color;
+  }
+
+  > a {
+    figure {
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      img {
+        transition: all 0.3s;
+
+        &:hover {
+          transform: rotate(1deg) scale(1.03);
+          opacity: 0.8;
+        }
+      }
+    }
+
+  }
+
+  .post-content {
+    padding: .8em;
+    background-color: $post-item-bg;
+    //text-align: center;
+    transition: background-color 300ms ease;
+    color: $post-color;
+    @media (min-width: vars.$sm) and (max-width: (vars.$md - 1px)) {
+      font-size: 75%;
+    }
+
+    .post-meta a {
+      color: $post-color;
+      text-decoration: none;
+      font-size: $post-meta-font-size;
+      &:hover{
+        opacity: 0.8;
+      }
+    }
+
+    .btn {
+      color: $post-button-color;
+      border-color: $post-button-color;
+      transition: all 0.3s ease-in-out;
+
+      &:before {
+        background-color: $post-button-color;
+      }
+
+      &:hover {
+        opacity: 0.8;
+        color: $post-item-bg;
+      }
+    }
+
+  }
+}
+
+.post-grid {
+  margin: 0 -.7rem;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  @media screen and (min-width: vars.$xl) {
+    gap: 2em;
+    justify-content: flex-start;
+  }
+
+}
+
+.similar-post {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  background-color: $post-item-bg;
+  color: $post-color;
+
+  .post-grid {
+    .post-item:nth-child(3) {
+      display: none;
+      visibility: hidden;
+      @media (min-width: vars.$sm) {
+        display: block;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.blog,
+.archive{
+  h1{
+    @media (min-width: vars.$breakpoint-nav) {
+      margin-top: 0 !important;
+    }
+
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "acf/tsc-testimonial-slider",
+  "title": "Testimonial Slider",
+  "description": "",
+  "style": [
+  ],
+  "category": "formatting",
+  "icon": "slides",
+  "keywords": [
+    "slider",
+    "bild",
+    "image",
+    "carousel",
+    "karusel",
+    "rezension",
+    "testimonial",
+    "review"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "testimonial-slider.php",
+    "blockVersion": 3
+  },
+  "supports": {
+    "anchor": true,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "ariaLabel": true
+  }
+}

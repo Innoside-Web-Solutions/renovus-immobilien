@@ -1,0 +1,41 @@
+@use "../variables" as vars;
+
+
+body {
+    margin: 0;
+    font-family: vars.$primary-font-family;
+    background-color: vars.$base-bg-color;
+    color: vars.$base-color;
+    font-weight: vars.$base-font-weight;
+}
+
+
+.editor-post-title__block,
+.editor-post-title__input {
+    font-size: 20px;
+}
+
+figure {
+    margin: 0;
+}
+
+.has-background:not(.alignfull):not(.wp-block-gallery):not(.wp-block-separator):not(.wp-block-button__link):not(.wp-block-media-text){
+    padding: vars.$background-spacing-mobile;
+    @media screen and (min-width: vars.$breakpoint-nav) {
+        padding: calc(#{vars.$background-spacing-mobile} * 3);
+    }
+
+    &.wp-block-columns{
+        @media screen and (min-width: vars.$breakpoint-nav) {
+            padding: vars.$background-spacing-desktop;
+        }
+    }
+
+    a:not(.btn):not(.btn-primary):not(.is-style-btn-primary):not(.btn-secondary):not(.is-style-btn-secondary) {
+        //color: inherit;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+}

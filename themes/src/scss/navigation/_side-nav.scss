@@ -1,0 +1,360 @@
+@use "../variables" as vars;
+
+
+.admin-bar #side-menu-button {
+  @media (min-width: 783px) {
+    top: 47px;
+  }
+}
+
+
+
+// ============================
+// VARIABLEN
+// ============================
+$side-nav-bg-color: #fff;
+$side-nav-color: vars.$nav-color;
+$side-nav-current-menu-item: vars.$primary;
+$side-menu-button-color: vars.$menu-button-color;
+$side-menu-width: 450px;
+$button-image-size: 32px;
+
+// ============================
+// MENU BUTTON (Burger Icon)
+// ============================
+#side-menu-button {
+  display: block;
+  height: vars.$nav-height-mobile;
+  cursor: pointer;
+  z-index: 3000;
+  position: fixed;
+  right: 10px;
+  top: 15px;
+  border: none;
+  background-color: transparent;
+  @media (min-width: vars.$xl) {
+    right: 30px;
+  }
+
+  .sign {
+    display: block;
+    z-index: 4000;
+    position: relative;
+    margin: 0 0 vars.$menu-button-margin 0;
+    border-radius: 2px;
+    transition: background-color 200ms linear, transform 300ms linear;
+    /*  image button  */
+    // height: $button-image-size; // mit image
+    // width: $button-image-size; // mit image
+    // background-image: url("assets/img/brush-dark.svg");
+    // background-color: transparent; // mit image
+    // background-size: cover;
+
+
+
+    /*  classic menu button  */
+    height: 2px;
+    background-color: vars.$menu-button-color;
+    width: 35px;
+
+
+
+    &:before,
+    &:after {
+
+      content: "";
+      display: block;
+      height: 2px;
+      border-radius: 2px;
+      position: absolute;
+      //top: 20px;
+      right: 0;
+      transition: transform 300ms linear;
+
+
+      /* image button */
+      // background-color: transparent;
+
+      /* classic menu button */
+      background-color: $side-menu-button-color;
+
+    }
+
+    &:before {
+      width: 35px;
+
+      /* classic menu button */
+      transform: translateY(-8px);
+    }
+
+    &:after {
+      width: 35px;
+
+      /* classic menu button */
+      transform: translateY(8px);
+
+      /* image button */
+      // transform: translateY(-3px);
+    }
+  }
+}
+
+// ============================
+// TOGGLE LOGIK PER CHECKBOX
+// ============================
+/*#trigger-side-menu {
+  display: none;
+
+  &:checked {
+
+    ~ #side-navigation {
+      display: block;
+      opacity: 1;
+      pointer-events: auto;
+      right: 0;
+      transition: all 0.3s ease-in-out;
+    }
+
+    ~ #side-menu-button .sign {
+      background-color: transparent !important;
+
+
+      !*  classic menu button *!
+      transform: translateX(-30%);  // ohne image
+
+      !*   image button   *!
+      // transform: translateY(4px);// mit image
+      //background-image: unset;// mit image
+      //transition: .2s all;  // mit image
+
+
+      &:before {
+        transform: rotate(-45deg);
+        width: 30px;
+      }
+
+      &:after {
+        transform: rotate(45deg);
+        width: 30px;
+
+      }
+    }
+  }
+}*/
+
+
+/* Offen-Zustand per Button-Attribut statt Checkbox */
+#side-menu-button[aria-expanded="true"] ~ #side-navigation {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Burger → X Animation beim geöffneten Zustand */
+#side-menu-button[aria-expanded="true"] .sign {
+  background-color: transparent !important;
+  transform: translateX(-30%);
+}
+
+#side-menu-button[aria-expanded="true"] .sign::before {
+  transform: rotate(-45deg);
+  width: 30px;
+}
+
+#side-menu-button[aria-expanded="true"] .sign::after {
+  transform: rotate(45deg);
+  width: 30px;
+}
+
+
+
+
+// ============================
+// SIDE NAVBAR
+// ============================
+#side-navbar {
+  display: none;
+
+  @media (min-width: vars.$breakpoint-nav) {
+    display: flex;
+  }
+
+  #side-navigation {
+    position: fixed;
+    top: 0;
+    width: $side-menu-width;
+    right: -$side-menu-width;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: $side-nav-bg-color;
+    opacity: 1; // TODO: Deaktivieren bei Bedarf
+    pointer-events: none;
+    transition: all 0.35s ease-in-out;
+    z-index: 2000;
+    padding-bottom: 0;
+    flex-direction: column;
+    justify-content: space-between;
+
+    // ========================
+    // NAVIGATION LIST
+    // ========================
+    .nav-side-menu {
+      padding: 2rem 2.75rem 2rem 2.5rem;
+      list-style-type: none;
+
+      a {
+        display: inline-block;
+        text-decoration: none;
+        transition: all 0.4s ease;
+        position: relative;
+        padding-left: 0 !important;
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 100%;
+          bottom: 0;
+          height: 1px;
+          background-color: vars.$base-color;
+          transition: all 0.4s ease;
+        }
+
+        &:hover {
+          opacity: 0.7;
+
+          &:before {
+            right: 0;
+          }
+        }
+      }
+
+      a:last-of-type:before {
+        content: unset !important;
+      }
+
+      li {
+        position: relative;
+        white-space: nowrap;
+      }
+
+      > li {
+        max-width: 300px;
+        text-transform: uppercase;
+        font-weight: vars.$nav-mobile-font-weight;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+        &:last-of-type {
+          border-bottom: unset;
+        }
+
+        > a {
+          position: relative;
+          height: 60px;
+          line-height: 60px;
+          letter-spacing: vars.$nav-font-letter-spacing;
+          font-size: vars.$mobile-nav-font-size;
+          color: $side-nav-color;
+
+          @media (min-width: vars.$xxs) {
+            height: 70px;
+            line-height: 70px;
+          }
+
+          &:before {
+            content: unset !important;
+          }
+
+          &:active {
+            color: vars.$nav-active-color;
+          }
+        }
+
+        // Aktives Menü-Item
+        &.current-menu-item > a {
+          color: vars.$nav-active-color;
+          font-weight: vars.$nav-active-font-weight;
+        }
+
+        // ========================
+        // SUBMENU
+        // ========================
+        > .sub-menu {
+          //display: none; // bei Toggle aktivieren
+          padding-bottom: 1em;
+          padding-left: 1rem;
+          background-color: vars.$subnav-mobile-bg-color;
+          top: -200px;
+
+          li,
+          a {
+            color: vars.$subnav-mobile-color;
+            font-size: vars.$mobile-nav-font-size * 0.9;
+            text-transform: uppercase !important;
+          }
+
+          li.current-menu-item > a {
+            color: vars.$subnav-mobile-active-color;
+            font-weight: vars.$nav-active-font-weight;
+          }
+
+          a {
+            line-height: 1.2;
+            padding: 0.7em 0 0.4em 0.7em;
+
+            &:active {
+              color: vars.$subnav-mobile-active-color;
+            }
+          }
+
+          > li > ul > li {
+            font-weight: 500;
+            text-transform: none;
+          }
+        }
+
+        // ========================
+        // Submenu Toggle via Checkbox (deaktiviert)
+        // ========================
+        input[type="checkbox"] {
+          display: none;
+
+          /*
+          &:checked {
+            ~ .menu-toggle {
+              em:before {
+                opacity: 0;
+              }
+            }
+
+            ~ .sub-menu {
+              display: block;
+              animation: animateSubMenuMobile 2s linear forwards;
+            }
+          }
+          */
+        }
+      }
+    }
+  }
+}
+
+// ============================
+// OPTIONAL: ANIMATION
+// ============================
+/*
+@keyframes animateSubMenuMobile {
+  0% {
+    top: -300px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+  }
+}
+*/

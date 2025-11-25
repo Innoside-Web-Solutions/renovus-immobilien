@@ -1,0 +1,64 @@
+body.login #nav a,
+body.login #backtoblog a {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0.5em;
+}
+body.login #nav a:hover,
+body.login #backtoblog a:hover {
+  color: #1F2128;
+  text-decoration: underline;
+}
+body.login #login {
+  padding: 2%;
+}
+body.login #login h1 {
+  display: none;
+}
+body.login #login svg, body.login #login img {
+  display: block;
+  max-width: 100px;
+  width: 100%;
+  height: auto;
+  margin: 2em auto;
+}
+body.login #login form {
+  border: 3px solid #fff;
+}
+body.login #login form input:focus {
+  border: 1px solid #fff;
+}
+body.login #login .button-primary {
+  border: 1px solid #fff;
+  background: #1F2128;
+  color: #fff;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+body.login #login .button-primary:hover {
+  background: rgb(8.7323943662, 9.2957746479, 11.2676056338);
+  color: #fff;
+}
+body.login .privacy-policy-link {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0.5em;
+}
+body.login .creator {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 0 24px;
+  color: #fff;
+}
+body.login .creator small {
+  display: block;
+  margin-bottom: 15px;
+}
+body.login .creator .creator-logo {
+  display: block;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #fff;
+  opacity: 0.85;
+}

@@ -1,0 +1,21 @@
+.splide__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.splide{
+
+    li{
+        display: inline-block;
+        &::marker{
+            display: none !important;
+        }
+
+        .image-slide{
+            width: 200px;
+            height: 150px;
+        }
+
+    }
+}

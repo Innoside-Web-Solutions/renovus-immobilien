@@ -1,0 +1,134 @@
+// MEDIA QUERIES
+$xxs: 420px;
+$xs: 600px;
+$sm: 768px;
+$wp-col-break: 782px;
+$md: 992px;
+$lg: 1200px;
+$xl: 1400px;
+$xxl: 1600px;
+$fz: 1920px;
+
+$wp-colum-breakpoint: 781px;
+$breakpoint-nav: 1200px;
+$media-text-breakpoint: calc($md - 1px);
+
+$font-path: "assets/fonts" !default;
+
+
+
+// *** FONT VARS
+$primary-font-family: var(--wp--preset--font-family--primary);
+$secondary-font-family: $primary-font-family;
+
+// COLOR VARS
+$primary: var(--wp--preset--color--primary);
+$secondary: var(--wp--preset--color--secondary);
+$third: var(--wp--preset--color--third);
+$lighted: var(--wp--preset--color--lighted);
+$darken: var(--wp--preset--color--darken);
+$base-bg-color: var(--wp--preset--color--base-bg);
+$base-color: var(--wp--preset--color--base);
+$base-border-color: var(--wp--preset--color--border);
+
+
+
+
+// layout
+$content-max-width: var(--wp--style--global--content-size);
+$padding-inline: 50px;
+$alignwide-max-width: var(--wp--style--global--wide-size);
+$alignwide-size: calc(($alignwide-max-width - $content-max-width) / 2);
+
+
+
+$container-padding-mobile: 20px;
+$container-padding-desktop: 50px;
+$container-width-mobile: calc(2 * $container-padding-mobile + $content-max-width);
+$container-width-desktop: calc(2 * $container-padding-desktop + $content-max-width);
+
+// BLOCK LAYOUT
+$section-min-height: 0;
+$column-gap: 2rem;
+$section-spacing-mobile: 3rem;
+$section-spacing-desktop: 6rem;
+$background-spacing-mobile: 1rem;
+$background-spacing-desktop: 6rem;
+
+
+
+
+
+
+
+
+// BASE FONT STYLES
+$base-font-size-desktop: 16px;
+$base-font-size-mobile: $base-font-size-desktop * 0.95;
+$base-line-height: 1.5;
+$base-font-weight: 400;
+
+$headline-font-family: var(--wp--preset--font-family--secondary);
+$headline-font-weight: 700;
+$headline-color: $primary;
+
+
+// Buttons
+$button-radius: 0;
+$image-radius: 0;
+$rounded: 0;
+
+
+// **** NAVIGATION
+$nav-font-family: $primary-font-family;
+$nav-font-letter-spacing: .8px;
+
+
+// MOBILE NAV
+// layout
+$nav-height-mobile: 60px;
+$nav-padding-mobile: 20px;
+$navbar-padding-mobile: 5%;
+// font
+$mobile-nav-font-size: 16px;
+$nav-mobile-font-weight: 700;
+$nav-active-font-weight: 700;
+// colors
+$nav-color: $darken;
+$nav-bg-color: #fff;
+$nav-active-color: $primary;
+// sub
+$subnav-mobile-bg-color: $nav-bg-color;
+$subnav-mobile-color: $nav-color;
+$subnav-mobile-active-color: $nav-active-color;
+//menu-button
+$menu-button-margin: (calc($nav-height-mobile / 2) - 15px);
+$menu-button-color: $nav-color;
+
+
+// DESKTOP NAV
+// layout
+$nav-height-desktop: 80px;
+$nav-padding-desktop: 50px;
+$navbar-padding-desktop: 5%;
+$navbar-padding-full-size: 5%;
+// font
+$desktop-nav-font-size: 13px;
+$nav-desktop-font-weight: 700;
+$nav-desktop-active-font-weight: 700;
+// colors
+$nav-color-desktop: $darken;
+$nav-bg-color-desktop: #fff;
+$nav-active-color-desktop: $primary;
+// sub
+$desktop-subnav-font-size: 12px;
+$subnav-desktop-color: $darken;
+$subnav-desktop-bg-color: $lighted;
+$subnav-active-color-desktop: $primary;
+
+$desktop-menu-margin-top: 0;
+$nav-cta-height: 3rem;
+$nav-cta-color: #fff;
+$nav-cta-bg: $primary;
+
+

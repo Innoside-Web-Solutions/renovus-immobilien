@@ -1,0 +1,32 @@
+{
+  "name": "acf/tsc-phone-link",
+  "title": "Phone Link",
+  "description": "Returns phone link",
+  "style": [
+  ],
+  "category": "formatting",
+  "icon": "phone",
+  "keywords": [
+    "telefon",
+    "phone",
+    "link",
+    "url"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "phone-link.php"
+  },
+  "supports": {
+    "anchor": true,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "ariaLabel": true
+  }
+
+}

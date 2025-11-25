@@ -1,0 +1,46 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/inno-image-text-overlay",
+  "version": "0.1.0",
+  "title": "Image Text Overlay",
+  "category": "widgets",
+  "icon": "format-image",
+  "description": "Block mit einem Bild und optionalem Text-Overlay.",
+  "example": {},
+  "supports": {
+    "html": false,
+    "spacing": {
+      "margin": true,
+      "padding": true
+    },
+    "color": {
+      "text": true,
+      "background": true,
+      "gradients": true
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true
+    }
+  },
+  "attributes": {
+    "imageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "innerBgColor": {
+      "type": "string",
+      "default": ""
+    },
+    "innerColor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "tsc",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

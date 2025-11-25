@@ -1,0 +1,94 @@
+@use "../variables" as vars;
+
+// --------------------------------------------------------
+// Flaticon: Starter Theme
+// --------------------------------------------------------
+
+$flaticon-font: "flaticon_starter_theme";
+
+// Font-Face (nutzt vars.$font-path aus deinem variables-Modul)
+@font-face {
+  font-family: $flaticon-font;
+  src:
+          url("#{vars.$font-path}/flaticon/#{$flaticon-font}.woff2") format("woff2"),
+          url("#{vars.$font-path}/flaticon/#{$flaticon-font}.woff") format("woff"),
+          url("#{vars.$font-path}/flaticon/#{$flaticon-font}.ttf") format("truetype"),
+          url("#{vars.$font-path}/flaticon/#{$flaticon-font}.eot") format("embedded-opentype"),
+          url("#{vars.$font-path}/flaticon/#{$flaticon-font}.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Mixin für Flaticon-Schrift
+@mixin flaticon {
+  font-family: $flaticon-font !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Basisauszeichnung für alle flaticon-Elemente
+i[class^="flaticon-"]::before,
+i[class*=" flaticon-"]::before,
+[class^="flaticon-"]::before,
+[class*=" flaticon-"]::before,
+[class^="flaticon-"],
+[class*=" flaticon-"] {
+  @include flaticon;
+}
+
+// --------------------------------------------------------
+// Icon Map (Name → Codepoint)
+// --------------------------------------------------------
+$flaticon_starter_theme-map: (
+        "facebook-app-symbol": "\f101",
+        "instagram": "\f102",
+        "linkedin": "\f103",
+        "mail": "\f104",
+        "telephone": "\f105",
+        "check": "\f106",
+        "right-arrow": "\f107",
+        "left-arrow": "\f108",
+        "arrow-down-sign-to-navigate": "\f109",
+        "up-arrow": "\f10a",
+        "youtube": "\f10b",
+        "maps-and-flags": "\f10c",
+        "whatsapp": "\f10d",
+        "signal": "\f10e",
+        "twitter": "\f10f",
+        "wall-clock": "\f110",
+        "pdf-file": "\f111",
+        "download": "\f112",
+        "calendar": "\f113",
+        "calendar-1": "\f114",
+        "next": "\f115",
+        "back": "\f116",
+        "next-1": "\f117",
+        "forward": "\f118",
+        "back-1": "\f119",
+        "previous": "\f11a",
+        "checked": "\f11b",
+        "check-1": "\f11c",
+        "check-2": "\f11d",
+);
+
+// Optional: Helper-Funktion, falls du mal manuell zugreifen willst
+@function flaticon-code($name) {
+  @return map-get($flaticon_starter_theme-map, $name);
+}
+
+// --------------------------------------------------------
+// Automatische Klassengenerierung aus der Map
+// .flaticon-<name>::before { content: "<codepoint>"; }
+// --------------------------------------------------------
+@each $name, $code in $flaticon_starter_theme-map {
+  .flaticon-#{$name}::before {
+    content: $code;
+  }
+}

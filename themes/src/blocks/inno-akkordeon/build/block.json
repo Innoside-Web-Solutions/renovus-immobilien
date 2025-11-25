@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "tsc/inno-akkordeon",
+  "version": "0.1.0",
+  "title": "Inno Akkordeon",
+  "category": "widgets",
+  "icon": "smiley",
+  "description": "Ein einzelnes Akkordeon-Panel mit Frage und Antwort",
+  "keywords": [
+    "faq",
+    "akkordeon",
+    "eintrag"
+  ],
+  "textdomain": "tsc",
+  "editorScript": "file:./index.js",
+  "viewScript": "file:./view.js",
+  "style": "file:./style.css",
+  "editorStyle": "file:./editor.css",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "spacing": {
+      "margin": true,
+      "padding": true
+    },
+    "color": {
+      "background": true,
+      "text": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "source": "html",
+      "selector": "button"
+    },
+    "open": {
+      "type": "boolean",
+      "default": false
+    },
+    "uid": {
+      "type": "string"
+    }
+  },
+  "example": {
+    "attributes": {
+      "title": "Wie beantrage ich die Förderung?",
+      "open": false
+    },
+    "innerBlocks": [
+      {
+        "name": "core/paragraph",
+        "attributes": {
+          "content": "Du kannst den Antrag online über das Förderportal stellen. Bitte halte alle nötigen Unterlagen bereit."
+        }
+      }
+    ]
+  }
+}

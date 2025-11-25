@@ -1,0 +1,30 @@
+@use "../variables" as vars;
+
+.nav-menu,
+.sub-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.js {
+  #primary-nav {
+    transition: opacity 200ms linear;
+
+    .nav-menu {
+      > li {
+        > .sub-menu {
+          @media (min-width: vars.$breakpoint-nav) {
+            transition: opacity 200ms;
+          }
+
+          li {
+            transition: transform 200ms linear, height 200ms linear;
+
+          }
+        }
+      }
+    }
+  }
+}
+
+

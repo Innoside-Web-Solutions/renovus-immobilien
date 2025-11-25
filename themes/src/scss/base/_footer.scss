@@ -1,0 +1,74 @@
+@use "../variables" as vars;
+
+
+$footer-bg-color: vars.$primary;
+$footer-color: #fff;
+
+
+.site-info,.legals {
+  background-color: $footer-bg-color;
+  color: $footer-color;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  z-index: 3;
+  position: relative;
+  line-height: 1.5;
+  padding: 2rem;
+
+  .copyright,
+  .creator {
+    display: inline-block;
+
+    &:hover {
+      opacity: 0.8;
+      transition: 0.2s ease-in-out;
+    }
+  }
+
+  .legal-nav {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: .7rem;
+    color: $footer-color;
+    list-style-type: none;
+
+    li{
+      a{
+        color: $footer-color ;
+      }
+    }
+
+    li:not(:last-of-type) {
+    position: relative;
+    margin-right: .7rem;
+      &:after{
+        content: "";
+        height: .9rem;
+        right: -.7rem;
+        width: 2px;
+        top: 6px;
+        position: absolute;
+        background-color: $footer-color;
+      }
+
+
+
+
+
+    }
+  }
+
+}
+
+.page-footer{
+  a{
+    text-decoration: none;
+    &:hover{
+      color: vars.$secondary;
+    }
+  }
+}

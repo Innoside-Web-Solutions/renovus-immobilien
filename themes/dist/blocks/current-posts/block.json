@@ -1,0 +1,35 @@
+{
+  "name": "acf/currentposts",
+  "title": "Aktuelle News",
+  "description": "A custom posts block that can use ACF fields.",
+  "style": [
+  ],
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": [
+    "posts",
+    "news",
+    "beitrag",
+    "beiträge"
+  ],
+
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "current-posts.php"
+  },
+  "supports": {
+    "anchor": true,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "ariaLabel": true
+  },
+  "allowedBlocks": [
+
+  ]
+}

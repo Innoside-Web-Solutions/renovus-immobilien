@@ -1,0 +1,62 @@
+@use "../variables" as vars;
+
+
+.woocommerce {
+
+
+
+  /*
+    a {
+      color: vars.$primary-color;
+      text-decoration: none;
+
+      &:hover {
+        color: vars.$third-color;
+        text-decoration: underline;
+
+      }
+    }
+
+    a.added_to_cart {
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 7px 0 7px 12.1px;
+        border-color: transparent transparent transparent vars.$third-color;
+        padding-right: 5px;
+      }
+    }
+
+    #content{
+      overflow: hidden;
+    }
+
+    .product{
+
+      img{
+      aspect-ratio: 4 /3;
+      }
+
+    }
+
+  }
+
+  .woocommerce-MyAccount-content {
+    a {
+      color: vars.$primary-color;
+      text-decoration: none;
+
+      &:hover {
+        color: vars.$third-color;
+        text-decoration: underline;
+
+      }
+    }
+
+
+  */
+
+}

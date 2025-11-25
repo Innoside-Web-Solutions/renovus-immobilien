@@ -1,0 +1,17 @@
+@use "../../variables" as vars;
+
+.wp-block-acf-logocarousel {
+
+  .splide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    max-width: 100px;
+  }
+
+
+
+}
