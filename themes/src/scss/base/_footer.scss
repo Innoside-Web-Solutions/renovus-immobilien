@@ -71,4 +71,19 @@ $footer-color: #fff;
       color: vars.$secondary;
     }
   }
+
+  .wp-block-navigation-item__content{
+    transition: .4s all ease-in-out;
+    &:hover {
+      opacity: .8;
+      text-decoration: underline;
+
+    }
+  }
+
+  .tsc-icon{
+      display: none;
+
+  }
+
 }

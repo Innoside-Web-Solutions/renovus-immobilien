@@ -1956,6 +1956,17 @@ input[type=submit]:active,
 .page-footer a:hover {
   color: var(--wp--preset--color--secondary);
 }
+.page-footer .wp-block-navigation-item__content {
+  -webkit-transition: 0.4s all ease-in-out;
+  transition: 0.4s all ease-in-out;
+}
+.page-footer .wp-block-navigation-item__content:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+.page-footer .tsc-icon {
+  display: none;
+}
 
 .fluentform {
   border: 1px solid var(--wp--preset--color--lighted);
