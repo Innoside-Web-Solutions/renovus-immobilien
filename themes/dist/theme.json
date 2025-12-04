@@ -48,6 +48,11 @@
           "name": "Third"
         },
         {
+          "slug": "fourth",
+          "color": "#00335A",
+          "name": "Fourth"
+        },
+        {
           "slug": "lighted",
           "color": "#D3E7F8",
           "name": "Lighted"
