@@ -1,0 +1,47 @@
+@use "../variables" as vars;
+
+.nav-menu .wpml-ls-item {
+  a::after {
+    content: unset !important;
+  }
+  img{
+    width: 18px;
+  }
+
+  > .sub-menu {
+    margin-left: -2px;
+    top: 60% !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    &:before{
+      content: unset !important;
+    }
+
+    li{
+      padding: 0 !important;
+      background-color: transparent !important;
+      a{
+        padding: .2rem !important;
+      }
+
+      img{
+        width: 18px;
+      }
+    }
+
+  }
+
+  @media (min-width: vars.$breakpoint-nav) {
+
+    a::after {
+      content: unset !important;
+    }
+    img{
+      width: 18px;
+    }
+
+  }
+
+
+}

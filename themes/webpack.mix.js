@@ -57,8 +57,8 @@ for (const task of js_tasks) {
 mix.setPublicPath('dist').options({ processCssUrls: false });
 
 mix.browserSync({
-    proxy: 'localhost:90',
-    port: 90,
+    proxy: 'localhost:55',
+    port: 55,
     files: [
         'dist/**/*.php',
         'src/**/*',

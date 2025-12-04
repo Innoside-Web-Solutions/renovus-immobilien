@@ -6,7 +6,7 @@
       <paths name="dev">
         <serverdata>
           <mappings>
-            <mapping deploy="/public_html/starter/wp-content/themes/inno-pro" local="$PROJECT_DIR$/themes/dist" web="/" />
+            <mapping deploy="/public_html/renovus/wp-content/themes/inno-pro" local="$PROJECT_DIR$/themes/dist" web="/" />
           </mappings>
         </serverdata>
       </paths>

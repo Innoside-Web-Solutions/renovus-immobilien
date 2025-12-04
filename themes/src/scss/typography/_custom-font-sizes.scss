@@ -1,0 +1,46 @@
+@use "../variables" as vars;
+
+// ---------------------------------------------------------
+// Fluid Typography System
+// ---------------------------------------------------------
+
+// Globale Einstellungen
+$fluid-min-breakpoint: 320;   // Mobil
+$fluid-max-breakpoint: 1600;  // Desktop
+
+// Map der definierten Schriftgrößen
+// Key = Klassenname, Value = Maximalwert in REM
+$fluid-font-sizes: (
+        "2-rem": 2rem,
+        "2-5-rem": 2.5rem,
+        "3-rem": 3rem,
+        "4-rem": 4rem,
+        "5-rem": 5rem,
+        "6-rem": 6rem 
+);
+
+// Funktion: berechnet die Minimalgröße (z.B. 75% des Max)
+@function fluid-min($max-size) {
+  @return $max-size * 0.75;
+}
+
+// Funktion: berechnet den fluiden Wert
+@function fluid-size($min-size, $max-size) {
+  $slope: ($max-size - $min-size) / ($fluid-max-breakpoint - $fluid-min-breakpoint);
+  $intercept: $min-size - ($slope * $fluid-min-breakpoint);
+
+  @return clamp(
+          #{$min-size},
+          calc(#{$intercept} + #{$slope * 100}vw),
+          #{$max-size}
+  );
+}
+
+// Generator: erstellt alle .has-*-font-size Klassen
+@each $name, $max-size in $fluid-font-sizes {
+  $min-size: fluid-min($max-size);
+
+  :root .has-#{$name}-font-size {
+    font-size: fluid-size($min-size, $max-size);
+  }
+}

@@ -92,7 +92,7 @@
 
 
 .wp-block-cover.alignfull .wp-block-cover__inner-container{
-  @include container-spacing();
+  @include mixins.container-spacing();
 }
 
 

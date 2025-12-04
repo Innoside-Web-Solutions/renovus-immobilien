@@ -1,15 +1,15 @@
 @use "../variables" as vars;
 
 
-#navbar:not(.full-size-pageheader-menu){
-  background-color: vars.$nav-bg-color-desktop !important;
-
-}
-#navbar.lighted:not(.full-size-pageheader-menu){
+#navbar:not(.full-size-pageheader-menu) {
   background-color: vars.$nav-bg-color-desktop !important;
 
 }
 
+#navbar.lighted:not(.full-size-pageheader-menu) {
+  background-color: vars.$nav-bg-color-desktop !important;
+
+}
 
 
 #navbar {
@@ -20,47 +20,162 @@
   left: 0;
   right: 0;
   z-index: 900;
-  height: vars.$nav-height-mobile;
+  height: vars.$nav-height-mobile + 45px;
   background-color: vars.$nav-bg-color;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding-right: vars.$navbar-padding-mobile;
   padding-left: vars.$navbar-padding-mobile;
   transition: all 0.3s ease-in-out;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+  &:after{
+    content: "";
+    position: absolute;
+    height: 45px ;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: vars.$nav-bg-color;
+    z-index: -1;
+
+  }
+
+  .company-infos {
+    font-weight: 300;
+    font-size: .8rem;
+    grid-area: company-infos;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .contact-links, .address{
+      display: flex;
+      flex-direction: column;
+    }
+
+  }
+  .brand-wrapper {
+    grid-area: brand;
+  }
+  .menu-button {
+    grid-area: menubutton;
+  }
+  .links {
+    grid-area: links;
+  }
+
+  display: grid;
+  grid-template-rows: vars.$nav-height-mobile 40px;
+
+  grid-template-columns: 1fr 1fr 50px;
+  grid-template-areas:
+    "company-infos company-infos company-infos"
+    "brand brand menubutton";
+
+
+  .links {
+    display: none;
+    grid-area: links;
+  }
+
+
   @media screen and (min-width: vars.$breakpoint-nav) {
     padding-right: vars.$navbar-padding-desktop;
     padding-left: vars.$navbar-padding-desktop;
-    align-items: flex-start;
     position: fixed;
     top: 0;
     left: 0;
     background-color: transparent;
     font-weight: vars.$nav-desktop-font-weight !important;
-    height: vars.$nav-height-desktop;
+    height: vars.$nav-height-desktop + 45px;
     box-shadow: none;
+    align-items: center;
 
-    &.full-size-pageheader-menu.lighted{
+    &:after{
+      content: unset;
+    }
+
+    #primary-nav{
+      grid-area: nav;
+    }
+
+    grid-template-rows: vars.$nav-height-desktop 45px;
+
+    grid-template-columns: 300px 1fr 1fr 1fr;
+    grid-template-areas:
+    "brand  company-infos company-infos company-infos"
+    "nav nav nav nav";
+
+
+    .links {
+      height: unset !important;
+      margin: 3rem 0 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: vars.$darken;
+      li {
+        padding: 1rem;
+        a {
+
+
+          i {
+            color: vars.$base-bg-color;
+            font-size: 1.5rem
+          }
+        }
+      }
+
+      @media (min-width: vars.$breakpoint-nav) {
+        position: relative;
+        height: vars.$nav-height-desktop;
+        margin: 0 0 0 1rem ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .7rem;
+        background-color: transparent;
+        li {
+          padding: .5rem;
+          a {
+
+            i {
+              font-size: .9rem;
+              color: vars.$nav-color-desktop;
+
+            }
+          }
+        }
+      }
+
+    }
+
+
+
+
+    &.full-size-pageheader-menu.lighted {
       .nav-menu > li > a {
         color: #fff !important;
       }
-      #primary-nav ul.links{
-        i{
+
+      #primary-nav ul.links {
+        i {
           color: #fff !important;
         }
       }
 
     }
-    &.full-size-pageheader-menu:not(.lighted){
+    &.full-size-pageheader-menu:not(.lighted) {
       background-color: vars.$nav-bg-color-desktop;
     }
 
 
   }
-
-
-
 
 
   @media (min-width: vars.$fz) {

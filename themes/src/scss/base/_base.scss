@@ -22,11 +22,11 @@ html {
 body {
   margin: 0;
   background-color: vars.$base-bg-color;
-  padding-top: vars.$nav-height-mobile !important;
+  padding-top: vars.$nav-height-mobile + 40px !important;
   overflow-x: hidden;
   position: relative;
   @media (min-width: vars.$breakpoint-nav) {
-    padding-top: vars.$nav-height-desktop !important;
+    padding-top: vars.$nav-height-desktop +45px !important;
   }
 }
 

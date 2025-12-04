@@ -7,8 +7,8 @@
 
   @media (min-width: vars.$breakpoint-nav) {
     position: absolute;
-    top: 0;
     z-index: 999999999999;
+    top: 15px;
   }
 
 
@@ -16,15 +16,16 @@
 
     display: block;
     @media (min-width: vars.$breakpoint-nav) {
-      padding-top: 5px;
     }
 
     img,
     svg {
       width: auto;
-      height: vars.$nav-height-mobile - 10px;
+      margin-top: 2.5px;
+      height: 40px;
       @media (min-width: vars.$breakpoint-nav) {
-        height: vars.$nav-height-desktop - 10px !important;
+        height: 50px;
+
       }
     }
 

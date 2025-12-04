@@ -34,12 +34,12 @@
         },
         {
           "slug": "primary",
-          "color": "#008BD2",
+          "color": "#004274",
           "name": "Primary"
         },
         {
           "slug": "secondary",
-          "color": "#8AA220",
+          "color": "#0088CE",
           "name": "Secondary"
         },
         {
@@ -90,15 +90,15 @@
       "letterSpacing": true,
       "fontFamilies": [
         {
-          "name": "Lato",
+          "name": "Poppins",
           "slug": "primary",
-          "fontFamily": "Lato, sans-serif"
+          "fontFamily": "Poppins, sans-serif"
         }
       ],
 
 
 
-      "customFontSize": false,
+      "customFontSize": true,
       "lineHeight": true,
       "dropCap": false,
       "fontSizes": [
@@ -136,6 +136,21 @@
           "slug": "3rem",
           "size": "3rem",
           "name": "3rem"
+        },
+        {
+          "slug": "4rem",
+          "size": "4rem",
+          "name": "4rem"
+        },
+        {
+          "slug": "5rem",
+          "size": "5rem",
+          "name": "5rem"
+        },
+        {
+          "slug": "6rem",
+          "size": "6rem",
+          "name": "6rem"
         }
       ]
     },

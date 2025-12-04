@@ -164,6 +164,40 @@ function waveChars() {
     });
 }
 
+function swingTextOnScroll() {
+
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".swing-text",
+            start: "top 80%",      // kannst du anpassen
+            toggleActions: "play none none reverse"
+        }
+    });
+
+    // 3× schwingen
+    tl.fromTo(".swing-text",
+        {rotateX: 40,
+            opacity: .7
+
+        },
+
+        {
+            opacity: 1,
+            rotateX: -40,
+            duration: 1,
+            ease: "none", repeat: 1,
+            yoyo: true
+        }
+    )
+
+        // zum Schluss auf 0°
+        .to(".swing-text", {
+            rotateX: 0,
+            duration: 0.6,
+            ease: "none",
+            opacity: 1,
+        });
+}
 
 
 document.addEventListener("DOMContentLoaded", function () {

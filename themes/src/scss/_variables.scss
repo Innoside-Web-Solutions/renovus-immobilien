@@ -57,16 +57,11 @@ $background-spacing-desktop: 6rem;
 
 
 
-
-
-
-
-
 // BASE FONT STYLES
 $base-font-size-desktop: 16px;
 $base-font-size-mobile: $base-font-size-desktop * 0.95;
 $base-line-height: 1.5;
-$base-font-weight: 400;
+$base-font-weight: 300;
 
 $headline-font-family: var(--wp--preset--font-family--secondary);
 $headline-font-weight: 700;
@@ -91,19 +86,19 @@ $nav-padding-mobile: 20px;
 $navbar-padding-mobile: 5%;
 // font
 $mobile-nav-font-size: 16px;
-$nav-mobile-font-weight: 700;
-$nav-active-font-weight: 700;
+$nav-mobile-font-weight: 500;
+$nav-active-font-weight: 500;
 // colors
-$nav-color: $darken;
-$nav-bg-color: #fff;
-$nav-active-color: $primary;
+$nav-color: #fff;
+$nav-bg-color: $primary;
+$nav-active-color: $secondary;
 // sub
 $subnav-mobile-bg-color: $nav-bg-color;
 $subnav-mobile-color: $nav-color;
 $subnav-mobile-active-color: $nav-active-color;
 //menu-button
 $menu-button-margin: (calc($nav-height-mobile / 2) - 15px);
-$menu-button-color: $nav-color;
+$menu-button-color: $secondary;
 
 
 // DESKTOP NAV
@@ -114,17 +109,18 @@ $navbar-padding-desktop: 5%;
 $navbar-padding-full-size: 5%;
 // font
 $desktop-nav-font-size: 13px;
-$nav-desktop-font-weight: 700;
-$nav-desktop-active-font-weight: 700;
+$nav-desktop-font-weight: 400;
+$nav-desktop-active-font-weight: 500;
 // colors
-$nav-color-desktop: $darken;
+$nav-color-desktop: #fff;
 $nav-bg-color-desktop: #fff;
 $nav-active-color-desktop: $primary;
 // sub
-$desktop-subnav-font-size: 12px;
+$desktop-subnav-font-size: 13px;
 $subnav-desktop-color: $darken;
-$subnav-desktop-bg-color: $lighted;
+$subnav-desktop-bg-color: $base-bg-color;
 $subnav-active-color-desktop: $primary;
+$subnav-active-bg-color-desktop: $lighted;
 
 $desktop-menu-margin-top: 0;
 $nav-cta-height: 3rem;

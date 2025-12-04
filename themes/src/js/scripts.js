@@ -71,7 +71,6 @@ function toggleSideNavButton(){
 
 }
 
-
 function toggleScrollTop() {
     const scrollTop = document.getElementById('scroll-top');
     console.log(scrollTop);

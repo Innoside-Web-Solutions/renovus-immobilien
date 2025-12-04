@@ -20,6 +20,9 @@ Text-Domain: tsc
 @use"typography/fonts";
 @use "base/base";
 @use "typography/base-typography";
+@use "typography/headlines";
+@use "typography/links";
+@use "typography/lists";
 
 @use "navigation/nav-settings";
 @use "navigation/navbar";
@@ -32,10 +35,6 @@ Text-Domain: tsc
 @use "navigation/side-nav";
 
 
-@use "typography/headlines";
-
-@use "typography/links";
-@use "typography/lists";
 @use "base/layout";
 @use "base/buttons" as buttons;
 @use "base/footer";
@@ -46,6 +45,7 @@ Text-Domain: tsc
 @use "base/scroll-top";
 @use "base/sidebar-menu";
 //@use "base/sidebar";
+//@use "base/wpml";
 
 
 @use "blocks/akkordeon";

@@ -1,5 +1,5 @@
 {
-  "name": "inno-pro-npx",
+  "name": "renovus",
   "scripts": {
     "dev": "mix",
     "watch": "mix watch",
