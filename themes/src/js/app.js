@@ -50,7 +50,7 @@ function delayedFadeInItems() {
             delay: index === 0 ? 0 : index * 0.15, // Erstes Element ohne Verzögerung
             scrollTrigger: {
                 trigger: element,
-                start: 'top 99%',
+                start: 'top 80%',
                 end: 'bottom top',
                 ease: "bounce.out",
             },

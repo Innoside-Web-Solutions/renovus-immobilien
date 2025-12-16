@@ -104,7 +104,7 @@
 
 }
 
-.wp-block-columns {
+/*.wp-block-columns {
   gap: vars.$column-gap;
   @media screen and (min-width: vars.$breakpoint-nav) {
     gap: calc(#{vars.$column-gap} * 2);
@@ -114,7 +114,7 @@
   &.is-style-reverse {
     flex-wrap: wrap-reverse !important;
   }
-}
+}*/
 
 .noscroll {
   overflow: hidden;

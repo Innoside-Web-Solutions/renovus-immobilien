@@ -17,7 +17,7 @@ $font-path: "../fonts";
 @use "editor/blocks/editor-video-header";
 @use "editor/blocks/editor-testimonial-slider";
 @use "editor/blocks/editor-logo-carousel";
-//@use "editor/blocks/editor-inno-icon-content";
+@use "editor/blocks/editor-inno-icon-content";
 
 
 @use "blocks/social-icons";
@@ -32,6 +32,7 @@ $font-path: "../fonts";
 @use "blocks/videotext";
 @use "blocks/overlayed-video";
 @use "blocks/inno-akkordeon";
+
 
 
 /*.post-item{

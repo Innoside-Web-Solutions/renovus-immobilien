@@ -142,7 +142,14 @@ wp.domReady(() => {
         label: 'Section Half Left',
     });
 
-
+    wp.blocks.registerBlockStyle('core/group', {
+        name: 'section-bg-divided-third-right',
+        label: 'Section-Background Divided Third Right',
+    });
+    wp.blocks.registerBlockStyle('core/group', {
+        name: 'section-bg-divided-third-left',
+        label: 'Section-Background Divided Third left',
+    });
 
 
 
@@ -196,7 +203,10 @@ wp.domReady(() => {
         name: 'btn-secondary',
         label: 'Secondary',
     });
-
+    wp.blocks.registerBlockStyle('core/button', {
+        name: 'btn-third',
+        label: 'Third',
+    });
 
     /*** headings ***/
 

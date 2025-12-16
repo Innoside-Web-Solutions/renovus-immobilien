@@ -54,12 +54,17 @@
         },
         {
           "slug": "lighted",
-          "color": "#D3E7F8",
+          "color": "#f5f5f5",
+          "name": "Lighted"
+        },
+        {
+          "slug": "lighted-transparent",
+          "color": "#FFFFFFE6",
           "name": "Lighted"
         },
         {
           "slug": "darken",
-          "color": "#1c1c1c",
+          "color": "#1d1d1d",
           "name": "Darken"
         }
       ],
@@ -177,5 +182,15 @@
         "layout": {}
       }
     }
+  },
+  "styles": {
+    "blocks": {
+      "core/columns": {
+        "spacing": {
+          "blockGap": "5rem"
+        }
+      }
+    }
   }
+
 }

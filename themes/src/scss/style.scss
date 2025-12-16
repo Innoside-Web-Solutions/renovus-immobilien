@@ -44,7 +44,7 @@ Text-Domain: tsc
 @use "base/screen-reader";
 @use "base/scroll-top";
 @use "base/sidebar-menu";
-//@use "base/sidebar";
+@use "base/sidebar";
 //@use "base/wpml";
 
 
@@ -54,6 +54,8 @@ Text-Domain: tsc
 @use "blocks/moving-overlay";
 @use "blocks/social-icons";
 @use "blocks/overlayed-video";
+@use "blocks/inno-image-text-overlay";
+@use "blocks/inno-icon-content";
 //use "blocks/team";
 //use "blocks/text-img";
 @use "blocks/text-img-overlay";
@@ -66,9 +68,11 @@ Text-Domain: tsc
 @use "templates/contact-page";
 @use "templates/legals";
 
-//@use "posts/grid";
-//@use "posts/navigation";
-//@use "posts/single";
+@use "posts/grid";
+@use "posts/navigation";
+@use "posts/single";
 
+@use "immo-tools/onOffice";
+@use "immo-tools/bottimmo";
 
 

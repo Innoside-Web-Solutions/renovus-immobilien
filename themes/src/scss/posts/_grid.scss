@@ -1,122 +1,181 @@
 @use "../variables" as vars;
 
 
-// POSTS
-$post-item-bg: transparent;
-$post-color: vars.$darken;
-$post-button-color: vars.$primary;
-$post-meta-font-size: 0.9rem;
-$post-item-max-width: 300px;
-
 
 .post-item {
   width: 100%;
-  max-width: $post-item-max-width;
   overflow: hidden;
-
-  @media (min-width: vars.$xs) {
-    width: 50%;
-  }
-  @media (min-width: vars.$sm) {
-    width: calc(100% / 3);
-  }
-
-  .post-title {
-    margin: 0 0 1rem;
-    color: $post-color;
+  display: grid;
+  margin-bottom: 1rem;
+  @media (min-width: vars.$md) {
+    grid-template-columns: 1fr 3fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
   }
 
-  > a {
-    figure {
-      overflow: hidden;
-      aspect-ratio: 4 / 3;
-      img {
-        transition: all 0.3s;
+  .post-meta {
 
-        &:hover {
-          transform: rotate(1deg) scale(1.03);
+
+    @media (min-width: vars.$md) {
+      max-width: 150px;
+      margin-left: auto;
+    }
+
+
+    time {
+      text-align: right;
+      color: vars.$primary;
+      padding-bottom: .5rem;
+      border-bottom: 1px solid vars.$lighted;
+      display: block;
+
+      .date-main {
+        display: block;
+        font-size: 5rem;
+        font-weight: 800;
+        line-height: 1;
+        @media (min-width: vars.$md) {
+          font-size: 6rem;
+        }
+      }
+
+      .date-sub {
+        font-weight: 700;
+        display: block;
+
+      }
+    }
+
+    .post-categories {
+      list-style-type: none;
+      padding-left: 0;
+      text-align: right;
+      margin: .5rem 0 0;
+
+      li {
+        display: inline-block;
+        position: relative;
+        margin-right: .3rem;
+
+        a {
+          @media (min-width: vars.$md) {
+            color: vars.$base-color;
+          }
+
+
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          width: 1px;
+          top: 3px;
+          bottom: 3px;
+          right: -.3rem;
+          background-color: vars.$lighted;
+          @media (min-width: vars.$md) {
+            content: unset;
+          }
+
+        }
+
+        &:last-of-type:before {
+          content: unset !important;
+        }
+
+        @media (min-width: vars.$md) {
+          display: block;
+        }
+      }
+
+    }
+
+
+  }
+
+
+  .post-content {
+    padding: 1rem 0;
+    transition: background-color 300ms ease;
+    text-align: right;
+    @media (min-width: vars.$md) {
+      text-align: left;
+      padding: 0;
+    }
+
+
+    > a {
+      figure {
+        overflow: hidden;
+        margin: 0 !important;
+        aspect-ratio: 3 / 2;
+
+        img {
+          transition: all 0.3s;
+
+        }
+      }
+      &:hover {
+
+        img {
+          transform: scale(1.01);
           opacity: 0.8;
         }
       }
+
+
+
     }
 
-  }
 
-  .post-content {
-    padding: .8em;
-    background-color: $post-item-bg;
-    //text-align: center;
-    transition: background-color 300ms ease;
-    color: $post-color;
-    @media (min-width: vars.$sm) and (max-width: (vars.$md - 1px)) {
-      font-size: 75%;
-    }
-
-    .post-meta a {
-      color: $post-color;
-      text-decoration: none;
-      font-size: $post-meta-font-size;
-      &:hover{
-        opacity: 0.8;
-      }
+    .post-title {
+      margin: .7rem 0 0 0;
     }
 
     .btn {
-      color: $post-button-color;
-      border-color: $post-button-color;
-      transition: all 0.3s ease-in-out;
-
-      &:before {
-        background-color: $post-button-color;
-      }
-
-      &:hover {
-        opacity: 0.8;
-        color: $post-item-bg;
-      }
+      margin: 0;
+      padding-top: .5rem !important;
     }
 
+
   }
+
 }
 
 .post-grid {
-  margin: 0 -.7rem;
-  padding: 0;
-  list-style-type: none;
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 2em;
-  @media screen and (min-width: vars.$xl) {
-    gap: 2em;
-    justify-content: flex-start;
-  }
-
+  margin-top: 0 !important;
 }
 
+/*
 .similar-post {
   padding-top: 3em;
   padding-bottom: 3em;
-  background-color: $post-item-bg;
+  background-color: vars.$post-item-bg;
   color: $post-color;
 
   .post-grid {
+
     .post-item:nth-child(3) {
       display: none;
       visibility: hidden;
-      @media (min-width: vars.$sm) {
+      @media (min-width: $sm) {
         display: block;
         visibility: visible;
       }
     }
   }
 }
+*/
+
 
 .blog,
-.archive{
-  h1{
+.archive {
+  h1 {
     @media (min-width: vars.$breakpoint-nav) {
-      margin-top: 0 !important;
+      //margin-top: 0 !important;
     }
 
   }

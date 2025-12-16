@@ -5,9 +5,10 @@ a {
   color: vars.$secondary;
   transition: all 250ms linear;
   text-decoration: none;
+  font-weight: 500;
 
   &:hover {
-    color: vars.$primary;
+    color: vars.$third;
   }
 
   &:active {

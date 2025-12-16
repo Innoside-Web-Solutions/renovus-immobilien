@@ -1,0 +1,61 @@
+@use "../variables" as vars;
+@use "../base/buttons" as buttons;
+
+// Ansprechpartner Portrait Aspect Ratio
+.oo-details-sidebar .oo-contact-info img {
+  height: auto;
+}
+
+
+// Detailseite Page Margin Bottom
+.oo-detailview {
+  margin-bottom: 2rem;
+
+  @media (min-width: vars.$lg) {
+    margin-bottom: 6rem;
+  }
+
+}
+
+// Buttons
+.oo-searchformfield input[type="submit"],
+.oo-details-btn,
+.oo-detailslink button{
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  padding: 1em 1.5em;
+  margin: 1em 0 1.1em;
+  line-height: 1;
+  border-radius: vars.$button-radius !important;
+  border: 1px solid vars.$primary;
+  background: vars.$primary !important;
+  background-color: vars.$primary !important;
+  color: #fff;
+  font-family: vars.$primary-font-family;
+  font-weight: 400;
+  box-shadow: none;
+  transition: opacity 0.3s linear, transform 0.2s ease;
+
+  &:hover,
+  &:active {
+    opacity: 0.8;
+    transform: translateY(-1px);
+  }
+}
+
+// Headline ausblenden
+
+
+
+
+
+
+
+
+
+
+
+

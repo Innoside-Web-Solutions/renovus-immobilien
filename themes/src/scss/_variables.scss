@@ -27,6 +27,7 @@ $secondary: var(--wp--preset--color--secondary);
 $third: var(--wp--preset--color--third);
 $fourth: var(--wp--preset--color--fourth);
 $lighted: var(--wp--preset--color--lighted);
+$lighted-transparent: var(--wp--preset--color--lighted-transparent);
 $darken: var(--wp--preset--color--darken);
 $base-bg-color: var(--wp--preset--color--base-bg);
 $base-color: var(--wp--preset--color--base);
@@ -51,7 +52,7 @@ $container-width-desktop: calc(2 * $container-padding-desktop + $content-max-wid
 // BLOCK LAYOUT
 $section-min-height: 0;
 $column-gap: 2rem;
-$section-spacing-mobile: 3rem;
+$section-spacing-mobile: 2rem;
 $section-spacing-desktop: 6rem;
 $background-spacing-mobile: 1rem;
 $background-spacing-desktop: 6rem;
@@ -65,8 +66,8 @@ $base-line-height: 1.5;
 $base-font-weight: 300;
 
 $headline-font-family: var(--wp--preset--font-family--secondary);
-$headline-font-weight: 700;
-$headline-color: $primary;
+$headline-font-weight: 400;
+$headline-color: $darken;
 
 
 // Buttons
@@ -87,8 +88,8 @@ $nav-padding-mobile: 20px;
 $navbar-padding-mobile: 5%;
 // font
 $mobile-nav-font-size: 16px;
-$nav-mobile-font-weight: 500;
-$nav-active-font-weight: 500;
+$nav-mobile-font-weight: 400;
+$nav-active-font-weight: 400;
 // colors
 $nav-color: #fff;
 $nav-bg-color: $primary;
@@ -119,7 +120,7 @@ $nav-active-color-desktop: $primary;
 // sub
 $desktop-subnav-font-size: 13px;
 $subnav-desktop-color: $darken;
-$subnav-desktop-bg-color: $base-bg-color;
+$subnav-desktop-bg-color: $lighted-transparent;
 $subnav-active-color-desktop: $primary;
 $subnav-active-bg-color-desktop: $lighted;
 

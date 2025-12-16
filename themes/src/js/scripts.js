@@ -148,6 +148,11 @@ function navbarRecolor() {
 
 
 DomReady(() => {
+
+    // Immobilien-Heading weg!!!!!
+    document.querySelectorAll('.oo-listheadline').forEach(el => el.remove());
+
+
     jsLoaded();
     toggleNavbarOnScroll();
     navbarRecolor();
@@ -162,15 +167,11 @@ DomReady(() => {
 
     initWpGalleryLightbox();
 
+    // entferne alle onOffice h1 headings
 
-    // Wählen Sie alle a-Tags aus, die sich innerhalb eines Elements mit der Klasse wp-block-image innerhalb einer WP Gallery befinden
-//     let aTags = document.querySelectorAll('.wp-block-gallery .wp-block-image > a');
-//
-// // Iterieren Sie über die ausgewählten a-Tags
-//     aTags.forEach((aTag) => {
-//         // Fügen Sie das data-fslightbox-Attribut zu jedem a-Tag hinzu
-//         aTag.setAttribute('data-fslightbox', '');
-//     });
+
+
+
     require("fslightbox");
 
 });

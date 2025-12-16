@@ -1,36 +1,38 @@
 <?php get_header(); ?>
 
     <header class="container">
-        <div class="wp-block-columns">
-            <div class="wp-block-column">
-                <?php the_title('<h1 >', '</h1>'); ?>
-            </div>
-            <div class="wp-block-column">
-                <?php
-                if (has_post_thumbnail()) {
-                    the_post_thumbnail('large');
-                }
-                ?>
-            </div>
-        </div>
-    </header>
-    <div class="container">
-        <main id="content">
-            <?php
-            if (have_posts()) {
-                while (have_posts()) {
-                    the_post();
-                    the_content();
-                }
-            }
 
-            get_tsc_post_pagination('Voriger Beitrag', 'Nächstger Beitrag');
+        <div class="wp-block-group">
+            <?php the_title('<h1 class="is-style-h2 is-style-wave-chars" >', '</h1>'); ?>
+
+            <?php
+            if (has_post_thumbnail()) {
+                the_post_thumbnail('post_single');
+            }
             ?>
 
 
+        </div>
+    </header>
+    <div class="container">
+    <div class="has-sidebar">
 
-        </main>
-        <?php include(locate_template('template-parts/posts/sidebar-posts.php')); ?>
 
+            <main id="content">
+                <?php
+                if (have_posts()) {
+                    while (have_posts()) {
+                        the_post();
+                        the_content();
+                    }
+                }
+
+                ?>
+
+
+            </main>
+            <?php include(locate_template('template-parts/posts/sidebar-posts.php')); ?>
+
+        </div>
     </div>
 <?php get_footer(); ?>

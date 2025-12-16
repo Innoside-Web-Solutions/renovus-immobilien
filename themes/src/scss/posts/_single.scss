@@ -17,7 +17,7 @@
 
     /*
     .meta {
-        color: lighten(vars.$base-color, 15%);
+        color: lighten($base-color, 15%);
 
         .date, .category, .tags {
             margin-right: 1em;

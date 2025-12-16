@@ -41,14 +41,14 @@
     display: none;
   }
 
-  @media (min-width: vars.$sm) {
+  @media (min-width: vars.$breakpoint-nav) {
     .brand-mobile {
       display: none;
     }
   }
 
 
-  @media (min-width: vars.$sm) {
+  @media (min-width: vars.$breakpoint-nav) {
 
 
     // ===== Desktop incl. colored navbar ====
