@@ -84,3 +84,11 @@ input[type="submit"],
     }
   }
 }
+
+// Menü button im widget
+.btn-no-word-break a{
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  white-space: normal !important;
+  line-height: 1.4 !important;
+}

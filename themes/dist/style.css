@@ -1970,6 +1970,13 @@ input[type=submit]:active,
   opacity: 0.6;
 }
 
+.btn-no-word-break a {
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  white-space: normal !important;
+  line-height: 1.4 !important;
+}
+
 .site-info, .legals {
   background-color: var(--wp--preset--color--primary);
   color: #fff;
