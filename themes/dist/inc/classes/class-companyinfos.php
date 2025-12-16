@@ -324,16 +324,16 @@ class CompanyInfos
             $html .= self::getCountry('<span style="display: block">', '</span>');
 
             $html .= "<div style='display: block'>";
-            $html .= self::getEmailIcon('', '');
+           // $html .= self::getEmailIcon('', '');
             $html .= self::getEmailLink('<span ><strong>' . __('E-Mail : ', 'tsc') . '</strong>', '</span>');
             $html .= "</div>";
 
             $html .= "<div style='display: block'>";
-            $html .= self::getPhoneIcon('', '');
+            //$html .= self::getPhoneIcon('', '');
             $html .= self::getPhoneLink('<span><strong>' . __('Tel: ', 'tsc') . '</strong>', '</span>');
             $html .= "</div>";
 
-            $html .= self::getcellphoneLink('<span style="display: block"><strong>' . __('Mobil: ', 'tsc') . '</strong>', '</span>');
+            //$html .= self::getcellphoneLink('<span style="display: block"><strong>' . __('Mobil: ', 'tsc') . '</strong>', '</span>');
             $html .= self::getFaxOutput('<span style="display: block"><strong>' . __('Fax: ', 'tsc') . '</strong>', '</span>');
 
 

@@ -72,6 +72,13 @@ body:not(.wp-admin) .is-style-tablet-off {
   }
 }
 
+
+body:not(.wp-admin) .is-style-notebook-off {
+  @media (max-width: calc(1545px)) {
+    display: none !important;
+  }
+}
+
 .is-style-rounded{
   border-radius: vars.$rounded;
 }
@@ -215,3 +222,4 @@ body:not(.wp-admin) .is-style-tablet-off {
 
   }
 }
+

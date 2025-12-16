@@ -121,6 +121,21 @@ wp.domReady(() => {
 
         ]
     )
+    multiBlockStyles('notebook-off', 'Notebook Off',
+        [
+            'core/group',
+            'core/columns',
+            'core/column',
+            'core/paragraph',
+            'core/heading',
+            'core/image',
+            'core/video',
+            'core/cover',
+            'core/buttons',
+            "core/spacer"
+
+        ]
+    )
 
     wp.blocks.registerBlockStyle('core/group', {
         name: 'section-half-lighted-horizontal',
