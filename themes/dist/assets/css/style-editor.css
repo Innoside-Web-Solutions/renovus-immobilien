@@ -574,6 +574,13 @@ input[type=submit]:active,
   opacity: 0.6;
 }
 
+.btn-no-word-break a {
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  white-space: normal !important;
+  line-height: 1.4 !important;
+}
+
 .wp-block-separator {
   border-top: 0.5px solid;
 }
