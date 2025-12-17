@@ -163,7 +163,7 @@ DomReady(() => {
     toggleMenuButton();
     addAccessFreeMenuToggle();
     toggleSubmenu();
-    toggleSideNavButton();
+    //toggleSideNavButton();
 
     initWpGalleryLightbox();
 

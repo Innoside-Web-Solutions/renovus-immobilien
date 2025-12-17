@@ -74,6 +74,8 @@
   .links {
     display: none;
     grid-area: links;
+    margin: 0 !important;
+
   }
 
 
@@ -134,14 +136,14 @@
       @media (min-width: vars.$breakpoint-nav) {
         position: relative;
         height: vars.$nav-height-desktop;
-        margin: 0 0 0 1rem ;
+        margin: 0 ;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: .7rem;
+        gap: .3rem;
         background-color: transparent;
         li {
-          padding: .5rem;
+          padding: .25rem;
           a {
 
             i {

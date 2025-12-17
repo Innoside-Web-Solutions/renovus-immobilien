@@ -1826,6 +1826,10 @@ ul.has-primary-background-color li:before,
   gap: 0 !important;
 }
 
+.wp-block-cover__image-background.has-parallax {
+  background-position-y: 0%;
+}
+
 .btn,
 .ff-btn,
 input[type=submit],

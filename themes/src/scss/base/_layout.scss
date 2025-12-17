@@ -173,6 +173,8 @@
   }
 
 
+
+
 .no-wrap {
   white-space: nowrap !important;
 }
@@ -184,3 +186,6 @@
   gap: 0 !important;
 }
 
+.wp-block-cover__image-background.has-parallax {
+  background-position-y: 0%;
+}
