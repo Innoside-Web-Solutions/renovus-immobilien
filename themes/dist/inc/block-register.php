@@ -22,6 +22,7 @@ function tsc_register_blocks()
     register_block_type(get_template_directory() . '/blocks/social-icons');
 
     register_block_type(get_template_directory() . '/blocks/image-carousel');
+    register_block_type(get_template_directory() . '/blocks/logo-carousel');
     register_block_type(get_template_directory() . '/blocks/image-teaser');
     register_block_type(get_template_directory() . '/blocks/moving-overlay');
     register_block_type(get_template_directory() . '/blocks/text-image-overlay');

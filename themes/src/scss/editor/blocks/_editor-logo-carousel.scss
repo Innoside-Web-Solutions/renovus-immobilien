@@ -6,6 +6,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    ul{
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+
   }
 
   img {

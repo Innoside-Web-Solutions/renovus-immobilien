@@ -3278,6 +3278,86 @@ figure {
   z-index: 6;
 }
 
+.tsc-testimonial-slider {
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+}
+.tsc-testimonial-slider .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.7rem 0 1rem;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .tsc-testimonial-slider .content {
+    padding: 1rem 5rem;
+  }
+}
+.tsc-testimonial-slider .testimonial-sign {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 5vw, 3.125rem);
+  color: var(--wp--preset--color--secondary);
+  opacity: 0.5;
+}
+.tsc-testimonial-slider .splide__arrow,
+.tsc-testimonial-slider .splide__pagination {
+  z-index: 6;
+}
+.tsc-testimonial-slider .splide__arrow {
+  background: var(--wp--preset--color--lighted);
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+.tsc-testimonial-slider .splide__arrow svg {
+  fill: var(--wp--preset--color--third);
+  -webkit-transition: fill 0.3s ease;
+  transition: fill 0.3s ease;
+}
+.tsc-testimonial-slider .splide__arrow:hover {
+  background: var(--wp--preset--color--third);
+}
+.tsc-testimonial-slider .splide__arrow:hover svg {
+  fill: var(--wp--preset--color--third);
+}
+.tsc-testimonial-slider .splide__pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.7rem;
+}
+.tsc-testimonial-slider .splide__pagination button {
+  border-radius: 50%;
+  margin: 0;
+  background: var(--wp--preset--color--primary);
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+.tsc-testimonial-slider .splide__pagination button.is-active {
+  -webkit-transform: scale(1) !important;
+          transform: scale(1) !important;
+  background: var(--wp--preset--color--third);
+}
+
 .tsc-video-text-banner {
   overflow: hidden;
   margin: 0;
@@ -3428,86 +3508,6 @@ figure {
 }
 .wp-block-tsc-inno-akkordeon .inno-accordion-content[hidden] {
   display: none;
-}
-
-.tsc-testimonial-slider {
-  max-width: 750px;
-  margin: 0 auto;
-  text-align: center;
-}
-.tsc-testimonial-slider .content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 0.7rem 0 1rem;
-  position: relative;
-}
-@media (min-width: 768px) {
-  .tsc-testimonial-slider .content {
-    padding: 1rem 5rem;
-  }
-}
-.tsc-testimonial-slider .testimonial-sign {
-  display: inline-block;
-  margin-bottom: 1rem;
-  font-size: clamp(2rem, 5vw, 3.125rem);
-  color: var(--wp--preset--color--secondary);
-  opacity: 0.5;
-}
-.tsc-testimonial-slider .splide__arrow,
-.tsc-testimonial-slider .splide__pagination {
-  z-index: 6;
-}
-.tsc-testimonial-slider .splide__arrow {
-  background: var(--wp--preset--color--lighted);
-  border: none;
-  border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
-  -webkit-transition: background 0.3s ease;
-  transition: background 0.3s ease;
-}
-.tsc-testimonial-slider .splide__arrow svg {
-  fill: var(--wp--preset--color--third);
-  -webkit-transition: fill 0.3s ease;
-  transition: fill 0.3s ease;
-}
-.tsc-testimonial-slider .splide__arrow:hover {
-  background: var(--wp--preset--color--third);
-}
-.tsc-testimonial-slider .splide__arrow:hover svg {
-  fill: var(--wp--preset--color--third);
-}
-.tsc-testimonial-slider .splide__pagination {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 0.7rem;
-}
-.tsc-testimonial-slider .splide__pagination button {
-  border-radius: 50%;
-  margin: 0;
-  background: var(--wp--preset--color--primary);
-  -webkit-transition: background 0.3s ease;
-  transition: background 0.3s ease;
-}
-.tsc-testimonial-slider .splide__pagination button.is-active {
-  -webkit-transform: scale(1) !important;
-          transform: scale(1) !important;
-  background: var(--wp--preset--color--third);
 }
 
 .page-template-contact-page .contact span {

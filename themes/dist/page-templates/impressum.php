@@ -21,7 +21,7 @@ use \TSC\Imprint;
         <h3><?php _e('Website Konzeption, Design und Umsetzung', 'tsc'); ?></h3>
         <p><?php _e('Dr. Thomas Schreiber, Diplom-Webentwickler', 'tsc') ?></p>
         <h3><?php _e('Dies ist eine Webseite von:', 'tsc'); ?></h3>
-        <p><a target="_blank" href="https://innoside.at/">innoSIDE Web Solutions, AT-8054 Seiersberg-Pirka</a></p>
+        <p><a target="_blank" href="https://onlinerocker.at/">OnlineRocker</a></p>
 
 
         <h2><?php _e('Haftungsausschluss', 'tsc') ?></h2>

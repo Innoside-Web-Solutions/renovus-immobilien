@@ -61,9 +61,12 @@ Text-Domain: tsc
 @use "blocks/text-img-overlay";
 @use "blocks/video-header";
 @use "blocks/slider-header";
+@use "blocks/testimonial-slider";
+@use "blocks/logo-carousel";
+
 @use "blocks/videotext";
 @use "blocks/inno-akkordeon";
-@use "blocks/testimonial-slider";
+
 
 @use "templates/contact-page";
 @use "templates/legals";

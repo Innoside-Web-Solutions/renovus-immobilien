@@ -47,7 +47,6 @@ function imageCarousel() {
             perPage: 1,
             perMove: 1,
             duration: 500,
-
             arrows: true,
             breakpoints: {
                 768: {
@@ -67,11 +66,11 @@ function logoCarousel() {
             autoplay: true,
             arrows: false,
             pagination: false,
-            perPage: 5,
+            perPage: 3,
             perMove: 1,
             interval: 2000,
-            duration: 7000,
-            speed: 2000,
+            duration: 8000,
+            speed: 1000,
             gap: '2em',
 
 
@@ -82,12 +81,7 @@ function logoCarousel() {
                 768: {
                     perPage: 2
                 },
-                992: {
-                    perPage: 3
-                },
-                1200: {
-                    perPage: 4
-                }
+
             }
         }).mount();
     }
@@ -96,6 +90,8 @@ function logoCarousel() {
 document.addEventListener('DOMContentLoaded', function () {
     sliderHeader();
     testimonialSlider();
+    logoCarousel();
+    imageCarousel();
 });
 
 

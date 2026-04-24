@@ -1015,6 +1015,14 @@ figure {
       -ms-flex-align: center;
           align-items: center;
 }
+.wp-block-acf-logocarousel .splide ul {
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
 .wp-block-acf-logocarousel img {
   max-width: 100px;
 }
